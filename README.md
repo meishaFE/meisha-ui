@@ -1,4 +1,4 @@
-# ms-ui
+# meisha-ui
 
 > Mobile UI Components based on Vue.
 
