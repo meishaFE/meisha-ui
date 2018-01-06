@@ -11,8 +11,8 @@ module.exports = merge(webpackBaseConfig, {
     main: './src/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, '../lib'),
+    publicPath: '/static/',
     filename: 'meisha.min.js',
     library: 'meisha',
     libraryTarget: 'umd',

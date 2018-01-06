@@ -1,18 +1,17 @@
 /**
  * 公共配置
  */
-const path = require('path')
-const webpack = require('webpack')
-const packageConfig = require('../package.json')
+const path = require('path');
+const webpack = require('webpack');
+const packageConfig = require('../package.json');
 
 function resolve(dir) {
-  return path.join(__dirname, '..', dir)
+  return path.join(__dirname, '..', dir);
 }
 
 module.exports = {
   // 加载器
   module: {
-    // https://doc.webpack-china.org/guides/migrating/#module-loaders-module-rules
     rules: [
       {
         test: /\.(js|vue)$/,
@@ -72,4 +71,4 @@ module.exports = {
       'process.env.VERSION': `'${packageConfig.version}'`
     })
   ]
-}
+};
