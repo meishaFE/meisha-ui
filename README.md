@@ -37,11 +37,15 @@ Vue.use(Meisha)
 # 开始开发
 npm run dev
 
+# 添加新的组件
+npm run gen toast / npm run gen toast alert input
+
 # 单元测试
 npm run test
 
 # 打包
 npm run dist
+
 ```
 
 ## LICENSE
