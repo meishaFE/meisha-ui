@@ -32,3 +32,17 @@ Vue.use(Meisha)
     git clone git@github.com:meishaFE/meisha-ui.git
     npm run dev
     ```
+## npm scripts
+```shell
+# 开始开发
+npm run dev
+
+# 单元测试
+npm run test
+
+# 打包
+npm run dist
+```
+
+## LICENSE
+MIT

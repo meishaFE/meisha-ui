@@ -1,4 +1,5 @@
-const components = [];
+const components = [
+];
 
 const install = function(Vue, opts = {}) {
   components.map(component => {
@@ -11,7 +12,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.2',
+  version: '0.0.3',
   install
 };
 
