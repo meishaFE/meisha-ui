@@ -1,7 +1,3 @@
 {
-  "pagination": "./packages/pagination/index.js",
-  "dialog": "./packages/dialog/index.js",
-  "autocomplete": "./packages/autocomplete/index.js",
-  "dropdown": "./packages/dropdown/index.js",
-  "dropdown-menu": "./packages/dropdown-menu/index.js"
+  "button": "./packages/button/index.js"
 }

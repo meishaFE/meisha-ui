@@ -1,5 +1,8 @@
 <template>
-  <div>app</div>
+    <div>
+        <h1>Meisha-UI</h1>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
