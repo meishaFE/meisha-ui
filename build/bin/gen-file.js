@@ -7,13 +7,14 @@ const decamelize = require('decamelize'); // fooBar => foo_bar / foo-bar
 const newComponentNames = program.parse(process.argv).args;
 const components = require('../../components.json') || {};
 const buildEntry = require('./gen-entry');
+const namespaceReg = /^ms/i;
 const PACKAGE_INDEX_TEMPLATE = `import {{name}} from './src/main.vue';
 
 {{name}}.install = function(Vue) {
-  Vue.component({{name}}.name, {{name}});
+  Vue.component(Ms{{name}}.name, Ms{{name}});
 };
 
-export default {{name}};
+export default Ms{{name}};
 `;
 
 const COMPONENT_VUE_TEMPLATE = `<template>
@@ -31,7 +32,8 @@ export default {
 </style>
 `;
 
-newComponentNames.forEach(name => {
+newComponentNames.forEach(newName => {
+  const name = newName.replace(namespaceReg, '');
   const newPackageName = decamelize(name, '-');
   const newComponentName = uppercamelcase(name);
   const packageDirs = [path.join(__dirname, `../../packages/${newPackageName}`), path.join(__dirname, `../../packages/${newPackageName}/src`)];

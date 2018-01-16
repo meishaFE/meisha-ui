@@ -1,0 +1,64 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/button';
+@import 'mixins/utils';
+@include b(button) {
+  font-size: $--font-size-base;
+  line-height: 1;
+
+  position: relative;
+
+  display: block;
+
+  box-sizing: border-box;
+  box-sizing: border-box;
+  height: 50px;
+  margin: 0;
+
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+
+  appearance: none;
+
+  @include utils-user-select(none);
+
+  // size
+
+  @include m('normal') {
+    width: 100%;
+  }
+
+  @include m('small') {
+    display: inline-block;
+  }
+
+  @include m('mini') {
+  }
+
+  // type
+  @include m('default') {
+    background: $--button-background-color-default;
+
+    &:not(.is-disabled):active {
+      background: mix($--color-black, $--button-background-color-default, 5%);
+    }
+  }
+  @include m('primary') {
+    @include button-variant($--color-white, $--color-primary, $--color-primary);
+  }
+
+  @include m('danger') {
+    @include button-variant($--color-white, $--color-danger, $--color-danger);
+  }
+
+  @include when('disabled') {
+    cursor: not-allowed;
+  }
+}

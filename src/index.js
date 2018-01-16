@@ -1,4 +1,9 @@
+/* Automatically generated */
+
+import Button from '../packages/button/index.js';
+
 const components = [
+  Button
 ];
 
 const install = function(Vue, opts = {}) {
@@ -12,8 +17,9 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.3',
-  install
+  version: '0.0.2',
+  install,
+  Button
 };
 
 module.exports.default = module.exports;
