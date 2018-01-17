@@ -1,5 +1,6 @@
 <template>
   <div class="ms-cell-example">
+    <h2>cell</h2>
     <ms-cell is-link @click.native="handleListClick">test 3</ms-cell>
     <ms-cell @click.native="handleListClick">test 2</ms-cell>
   </div>
@@ -18,7 +19,6 @@ export default {
 <style lang="scss" scoped>
 .ms-cell-example {
   padding: 20px;
-  background: #f2f2f2;
 }
 </style>
 

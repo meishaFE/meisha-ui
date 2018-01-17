@@ -2,10 +2,14 @@
 
 import Button from '../packages/button/index.js';
 import Cell from '../packages/cell/index.js';
+import FooterTab from '../packages/footer-tab/index.js';
+import TabItem from '../packages/tab-item/index.js';
 
 const components = [
   Button,
-  Cell
+  Cell,
+  FooterTab,
+  TabItem
 ];
 
 const install = function(Vue, opts = {}) {
@@ -22,7 +26,9 @@ module.exports = {
   version: '0.0.3',
   install,
   Button,
-  Cell
+  Cell,
+  FooterTab,
+  TabItem
 };
 
 module.exports.default = module.exports;

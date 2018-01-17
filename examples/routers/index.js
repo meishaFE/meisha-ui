@@ -13,6 +13,10 @@ export default new Router({
     {
       path: '/cell',
       component: () => import('../components/cell.vue')
+    },
+    {
+      path: '/footer-tab',
+      component: () => import('../components/footer-tab.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

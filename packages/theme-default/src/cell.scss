@@ -3,7 +3,7 @@
 @import 'mixins/mixins';
 @import 'mixins/utils';
 
-@include b('cell') {
+@include b(cell) {
   line-height: 60px;
 
   display: block;
@@ -18,19 +18,19 @@
   color: $--color-text-secondary;
   background: $--color-white;
 
-  @include e('inner') {
+  @include e(inner) {
     position: relative;
 
     width: 100%;
 
     border-bottom: 1px solid #eff2f7;
 
-    @include when('link') {
+    @include when(link) {
       cursor: pointer;
     }
   }
 
-  @include e('suffix') {
+  @include e(suffix) {
     position: absolute;
     top: 50%;
     right: 0;

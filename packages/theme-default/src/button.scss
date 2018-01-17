@@ -35,43 +35,43 @@
   @include utils-user-select(none);
 
   // size
-  @include m('normal') {
+  @include m(normal) {
     width: 100%;
   }
 
-  @include m('small') {
+  @include m(small) {
     @include font-dpr($--font-size-base);
     display: inline-block;
     padding: 0 20px;
-    @include when('disabled') {
+    @include when(disabled) {
       color: mix($--color-white, $--color-text-secondary, 50%);
     }
   }
 
   // type
-  @include m('default') {
+  @include m(default) {
     background: $--button-background-color-default;
 
     &:not(.is-disabled):active {
       background: mix($--color-black, $--button-background-color-default, 5%);
     }
 
-    @include when('plain') {
+    @include when(plain) {
       color: $--color-text-secondary;
     }
   }
 
-  @include m('primary') {
+  @include m(primary) {
     @include button-variant($--color-white, $--color-primary, $--color-primary);
 
-    @include when('plain') {
+    @include when(plain) {
       color: $--color-primary;
     }
   }
 
-  @include m('warning') {
+  @include m(warning) {
     @include button-variant($--color-white, $--color-warning, $--color-warning);
-    @include when('plain') {
+    @include when(plain) {
       color: $--color-warning;
     }
   }

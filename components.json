@@ -1,4 +1,6 @@
 {
   "button": "./packages/button/index.js",
-  "cell": "./packages/cell/index.js"
+  "cell": "./packages/cell/index.js",
+  "footer-tab": "./packages/footer-tab/index.js",
+  "tab-item": "./packages/tab-item/index.js"
 }
