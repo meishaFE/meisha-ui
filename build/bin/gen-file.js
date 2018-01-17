@@ -8,6 +8,7 @@ const newComponentNames = program.parse(process.argv).args;
 const components = require('../../components.json') || {};
 const buildEntry = require('./gen-entry');
 const namespaceReg = /^ms/i;
+const endOfLine = require('os').EOL;
 const PACKAGE_INDEX_TEMPLATE = `import Ms{{name}} from './src/main.vue';
 
 Ms{{name}}.install = function(Vue) {
@@ -71,7 +72,7 @@ newComponentNames.forEach(newName => {
   fs.writeFileSync(path.join(__dirname, `../../packages/theme-default/src/${newPackageName}.scss`), '');
   fs.writeFileSync(path.join(__dirname, `../../test/unit/specs/${newPackageName}.spec.js`), '');
   fs.writeFileSync(path.join(__dirname, `../../examples/components/${newPackageName}.vue`), exampleTemplate);
-  fs.writeFileSync(path.join(__dirname, `../../components.json`), JSON.stringify(components, null, 2));
+  fs.writeFileSync(path.join(__dirname, `../../components.json`), JSON.stringify(components, null, 2) + endOfLine);
   console.log(`[gen file] INFO: add ${newPackageName} success!`);
 });
 
