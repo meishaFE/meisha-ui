@@ -2,7 +2,6 @@
     <button class="ms-button"
             @click="handleClick"
             :disabled="disabled"
-            :autofocus="autofocus"
             :class="[
               type ? 'ms-button--' + type : '',
               size ? 'ms-button--' + size : '',
@@ -20,13 +19,11 @@
 </template>
 
 <script>
-// TODO: 设计师给出的 small 和 mini size 无法使用（不可定宽，只能设定 padding）需沟通后确定
 // TODO: 暂未添加 loading （无设计稿），icon 插槽（暂无需求）
-// TODO: 暂未做 plain，（暂无设计稿）
 // TODO: 单元测试
 /**
  * @description 按钮
- * @param {String} [type=default] - 显示类型，接受 default, primary, danger
+ * @param {String} [type=default] - 显示类型，接受 default, warning, danger, primary
  * @param {string} [size=normal] - 尺寸，接受 normal, small, mini
  * @param {boolean} [disabled=false] - 禁用
  * @param {loading} [loading=false] - loading
@@ -35,7 +32,7 @@
  * @param {slot} - 显示文本
  *
  * @example
- * <ms-button size="large" type="primary">这是按钮</ms-button>
+ * <ms-button size="large" type="warning">这是按钮</ms-button>
  */
 export default {
   name: 'MsButton',
@@ -44,14 +41,14 @@ export default {
       type: String,
       default: 'default',
       validator(value) {
-        return !!~['default', 'danger', 'primary'].indexOf(value);
+        return !!~['default', 'primary', 'danger', 'warning'].indexOf(value);
       }
     },
     size: {
       type: String,
       default: 'normal',
       validator(value) {
-        return !!~['mini', 'small', 'normal'].indexOf(value);
+        return !!~['small', 'normal'].indexOf(value);
       }
     },
     nativeType: {

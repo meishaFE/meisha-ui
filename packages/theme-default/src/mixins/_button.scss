@@ -3,13 +3,9 @@
   background-color: $background-color;
   border-color: $border-color;
 
-  &:hover,
-  &:focus,
   &:active {
     background: mix($--color-black, $background-color, $--button-active-shade-percent);
-    border-color: mix($--color-black, $border-color, $--button-active-shade-percent);
     color: $color;
-    outline: none;
   }
 
   &.is-disabled {
@@ -19,7 +15,6 @@
     &:active {
       color: $--color-white;
       background-color: mix($--color-white, $background-color, $--button-disabled-tint-percent);
-      border-color: mix($--color-white, $background-color, $--button-disabled-tint-percent);
     }
   }
 }
