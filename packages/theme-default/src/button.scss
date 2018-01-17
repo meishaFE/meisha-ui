@@ -55,18 +55,32 @@
     &:not(.is-disabled):active {
       background: mix($--color-black, $--button-background-color-default, 5%);
     }
+
+    @include when('plain') {
+      color: $--color-text-secondary;
+    }
   }
 
   @include m('primary') {
     @include button-variant($--color-white, $--color-primary, $--color-primary);
+
+    @include when('plain') {
+      color: $--color-primary;
+    }
   }
 
   @include m('warning') {
     @include button-variant($--color-white, $--color-warning, $--color-warning);
+    @include when('plain') {
+      color: $--color-warning;
+    }
   }
 
   @include m('danger') {
     @include button-variant($--color-white, $--color-danger, $--color-danger);
+    @include when('plain') {
+      color: $--color-danger;
+    }
   }
 
   // disabled
@@ -76,10 +90,8 @@
 
   // plain
   @include when('plain') {
-    color: $--color-text-secondary;
     border-width: 1px;
     background: transparent;
-    box-shadow: none;
 
     &:not(.is-disabled):active {
       background: mix($--color-black, $--button-background-color-default, 5%);

@@ -10,7 +10,8 @@
                 'is-loading': loading,
                 'is-plain': plain,
               }
-            ]">
+            ]"
+            :style="[buttonBorder]">
         <span v-if="$slots.default"
               @click="handleInnerClick">
             <slot></slot>
@@ -57,7 +58,10 @@ export default {
     },
     loading: Boolean,
     disabled: Boolean,
-    plain: Boolean
+    plain: Boolean,
+    round: {
+      type: String
+    }
   },
   methods: {
     handleClick(evt) {
@@ -65,6 +69,13 @@ export default {
     },
     handleInnerClick(evt) {
       this.disabled && evt.stopPropagation();
+    }
+  },
+  computed: {
+    buttonBorder() {
+      return {
+        [this.round ? 'borderRadius' : '']: this.round
+      };
     }
   }
 };
