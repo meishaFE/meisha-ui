@@ -1,9 +1,11 @@
 /* Automatically generated */
 
 import Button from '../packages/button/index.js';
+import Cell from '../packages/cell/index.js';
 
 const components = [
-  Button
+  Button,
+  Cell
 ];
 
 const install = function(Vue, opts = {}) {
@@ -17,9 +19,10 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.2',
+  version: '0.0.3',
   install,
-  Button
+  Button,
+  Cell
 };
 
 module.exports.default = module.exports;

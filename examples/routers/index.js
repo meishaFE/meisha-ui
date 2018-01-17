@@ -9,6 +9,10 @@ export default new Router({
     {
       path: '/button',
       component: () => import('../components/button.vue')
+    },
+    {
+      path: '/cell',
+      component: () => import('../components/cell.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
