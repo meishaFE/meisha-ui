@@ -8,9 +8,9 @@ const newComponentNames = program.parse(process.argv).args;
 const components = require('../../components.json') || {};
 const buildEntry = require('./gen-entry');
 const namespaceReg = /^ms/i;
-const PACKAGE_INDEX_TEMPLATE = `import {{name}} from './src/main.vue';
+const PACKAGE_INDEX_TEMPLATE = `import Ms{{name}} from './src/main.vue';
 
-{{name}}.install = function(Vue) {
+Ms{{name}}.install = function(Vue) {
   Vue.component(Ms{{name}}.name, Ms{{name}});
 };
 
@@ -26,10 +26,16 @@ export default {
   name: 'Ms{{name}}'
 };
 </script>
+`;
 
-<style lang="scss" scoped>
-
-</style>
+const EXAMPLE_COMPONENT_TEMPLATE = `<template>
+  <div></div>
+</template>
+<script>
+export default {
+  name: 'Ms{{name}}Example'
+};
+</script>
 `;
 
 newComponentNames.forEach(newName => {
@@ -55,9 +61,16 @@ newComponentNames.forEach(newName => {
   const vueTemplate = render(COMPONENT_VUE_TEMPLATE, {
     name: newComponentName
   });
+
+  const exampleTemplate = render(EXAMPLE_COMPONENT_TEMPLATE, {
+    name: newComponentName
+  });
+
   fs.writeFileSync(path.join(__dirname, `../../packages/${newPackageName}/index.js`), indexTemplate);
   fs.writeFileSync(path.join(__dirname, `../../packages/${newPackageName}/src/main.vue`), vueTemplate);
   fs.writeFileSync(path.join(__dirname, `../../packages/theme-default/src/${newPackageName}.scss`), '');
+  fs.writeFileSync(path.join(__dirname, `../../test/unit/specs/${newPackageName}.spec.js`), '');
+  fs.writeFileSync(path.join(__dirname, `../../examples/components/${newPackageName}.vue`), exampleTemplate);
   fs.writeFileSync(path.join(__dirname, `../../components.json`), JSON.stringify(components, null, 2));
   console.log(`[gen file] INFO: add ${newPackageName} success!`);
 });
