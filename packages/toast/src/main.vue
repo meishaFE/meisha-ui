@@ -1,16 +1,14 @@
 <template>
     <transition name="ms-toast-fade">
         <div class="ms-toast"
-             :class="[ type && !iconClass ? `ms-toast--${type}`: '',
-             type || iconClass ? 'ms-toast-icon' : '',
+             :class="[ type || iconClass ? 'ms-toast--icon' : '',
              customClasses]"
              v-show="visible">
             <i :class="iconClass"
                v-if="iconClass"></i>
             <i :class="typeClass"
                v-else></i>
-            <span class="ms-toast__text"
-                  :style="{ 'padding-top': !type && !iconClass ? '0' : '16px' }">{{ message }}</span>
+            <span class="ms-toast__text">{{ message }}</span>
         </div>
     </transition>
 </template>

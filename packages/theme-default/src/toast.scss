@@ -22,6 +22,11 @@
   transition: opacity 0.3s linear;
   padding: 14px 26px;
 
+  @include m(icon) {
+    .ms-toast__text {
+      padding-top: 16px
+    }
+  }
   @include when(top) {
     top: 60px;
     left: 50%;
