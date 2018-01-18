@@ -19,6 +19,8 @@ const install = function(Vue, opts = {}) {
   components.map(component => {
     Vue.component(component.name, component);
   });
+
+  Vue.prototype.$toast = Toast;
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -36,7 +38,6 @@ module.exports.default = module.exports;
 
   const IMPORT_TEMPLATE = "import {{name}} from '../packages/{{package}}/index.js';";
   const INSTALL_COMPONENT_TEMPLATE = '  {{name}}';
-
   var includeComponentTemplate = [];
   var installTemplate = [];
   var listTemplate = [];
@@ -51,7 +52,7 @@ module.exports.default = module.exports;
         package: name
       })
     );
-    if (!~['Loading', 'MessageBox', 'Notification', 'Message'].indexOf(componentName)) {
+    if (!~['Loading', 'Toast'].indexOf(componentName)) {
       installTemplate.push(
         render(INSTALL_COMPONENT_TEMPLATE, {
           name: componentName,

@@ -27,7 +27,6 @@
  * @param {String} [type=default] - 显示类型，接受 default, warning, danger, primary
  * @param {string} [size=normal] - 尺寸，接受 normal, small, mini
  * @param {boolean} [disabled=false] - 禁用
- * @param {loading} [loading=false] - loading
  * @param {boolean} [plain=false] - 幽灵按钮
  * @param {string} [native-type] - 原生 type 属性
  * @param {slot} - 显示文本
@@ -56,7 +55,6 @@ export default {
       type: String,
       default: 'button'
     },
-    loading: Boolean,
     disabled: Boolean,
     plain: Boolean,
     round: {

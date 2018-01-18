@@ -24,6 +24,8 @@ Vue.use(Meisha)
 ## Browser Support
 *TODO*
 
+## Documentation
+* [Usage Guide](docs/guide.md)
 ## Development
 
 1. 请先 fork 一份到自己的项目下，不要直接在仓库下建分支。
