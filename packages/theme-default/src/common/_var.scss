@@ -3,34 +3,46 @@
 $--color-white: #fff !default;
 $--color-black: #000 !default;
 
- // TODO: add color
-$--color-primary: #fff !default;
-$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
-$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
-$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
-$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 8cc5ff */
-$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
-$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* b3d8ff */
-$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
-$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
-$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+// TODO: add color
+$--color-primary: #00ca9d !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 1ACFA7 */
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 33D5B1 */
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 4DDABA */
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 66DFC4 */
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* 80E5CE */
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* 99EAD8 */
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* B3EFE2 */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* CCF4EB */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* E6FAF5 */
 
-$--color-success: #fff !default;
-$--color-warning: #fff !default;
-$--color-danger: #fff !default;
-$--color-info: #fff !default;
+$--color-success: #fff !default; // TODO
+$--color-warning: #ff9c19 !default;
+$--color-danger: #ff4742 !default;
+$--color-disabled: #e0e0e0 !default;
 
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
 $--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
-$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-disabled-light: mix($--color-white, $--color-disabled, 80%) !default;
 
 $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
 $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
 $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
-$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+$--color-disabled-lighter: mix($--color-white, $--color-disabled, 90%) !default;
 
-$--color-text-primary: #303133 !default;
-$--color-text-regular: #606266 !default;
-$--color-text-secondary: #909399 !default;
-$--color-text-placeholder: #c0c4cc !default;
+// TODO 更新字体变量名状态，等待设计返回
+$--color-text-primary: #19191a !default;
+$--color-text-regular: #35343d !default;
+$--color-text-secondary: #5f5d70 !default;
+$--color-text-thirdly: #9b99a9 !default;
+$--color-text-fourthly: #969998 !default;
+
+/* Font
+-------------------------- */
+$--font-path: 'fonts' !default;
+$--font-size-base: 17px !default;
+$--font-size-small: 15px !default;
+$--font-size-mini: 12px !default;
+$--font-size-large: 18px !default;
+$--font-weight-primary: 500 !default;
+$--font-line-height-primary: 24px !default;
