@@ -17,6 +17,14 @@ export default new Router({
     {
       path: '/footer-tab',
       component: () => import('../components/footer-tab.vue')
+    },
+    {
+      path: '/toast',
+      component: () => import('../components/toast.vue')
+    },
+    {
+      path: '/back-top',
+      component: () => import('../components/back-top.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
