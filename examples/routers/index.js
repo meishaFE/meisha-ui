@@ -25,6 +25,14 @@ export default new Router({
     {
       path: '/back-top',
       component: () => import('../components/back-top.vue')
+    },
+    {
+      path: '/modal',
+      component: () => import('../components/modal.vue')
+    },
+    {
+      path: '/popup',
+      component: () => import('../components/popup.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
