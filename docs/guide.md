@@ -2,13 +2,15 @@
 
 ## Button
 
+### Demo
+
 ```html
 <ms-button size="large" type="warning">
   这是按钮
 </ms-button>
 ```
 
-#### API
+### API
 
 | 参数        | 说明           | 类型    | 可选值                            | 默认值  |
 | ----------- | -------------- | ------- | --------------------------------- | ------- |
@@ -18,17 +20,76 @@
 | plain       | 幽灵按钮       | Boolean |                                   | false   |
 | native-type | 按钮的原生类型 | String  |                                   |         |
 
-#### slot
+### slot
 
 | name | 描述           |
 | ---- | -------------- |
 | -    | 显示的文本内容 |
 
-## List-item
+## Cell
 
-## Footer-tab
+### API
+
+| 参数          | 说明                                 | 类型     | 可选值 | 默认值 |
+| ------------- | ------------------------------------ | -------- | ------ | ------ |
+| icon          | 右侧显示的 icon                      | String   |        |        |
+| is-link       | 是否为链接，如果为链接默认显示右箭头 | Boolean  | false  | normal |
+| on-icon-click | 点击 icon 的回调                     | Function |        |        |
+
+### slot
+
+| name | 描述        |
+| ---- | ----------- |
+| -    | Cell 的内容 |
+
+## Footer-tab & Tab-item
+
+### Demo
+
+```js
+ <ms-footer-tab v-model="activated"
+                       @change="handleFooterTabChange">
+            <ms-tab-item value="1">
+                <i slot="icon"
+                   class="ms-icon-arrow-right"></i>
+                tab-item1</ms-tab-item>
+            <ms-tab-item value="2">
+                <i slot="icon"
+                   class="ms-icon-arrow-left"></i>
+                tab-item2</ms-tab-item>
+            <ms-tab-item value="3">tab-item3</ms-tab-item>
+        </ms-footer-tab>
+```
+
+### Footer-tab API
+
+| 参数  | 说明                      | 类型    | 可选值 | 默认值 |
+| ----- | ------------------------- | ------- | ------ | ------ |
+| fixd  | 是否固定在底部            | Boolean |        | true   |
+| value | 绑定值，选中 tab 的 value | String  |        |        |
+
+### Footer-tab slot
+
+| 参数 | 说明              | 类型 | 可选值 | 默认值 |
+| ---- | ----------------- | ---- | ------ | ------ |
+| -    | Footer-tab 的内容 |      |        |        |
+
+### Tab-item API
+
+| 参数  | 说明     | 类型   | 可选值 | 默认值 |
+| ----- | -------- | ------ | ------ | ------ |
+| value | tab 的值 | String |        |        |
+
+### Tab-item slot
+
+| name | 描述             |
+| ---- | ---------------- |
+| -    | 显示的文本内容   |
+| icon | 显示的 icon 内容 |
 
 ## Toast
+
+### Demo
 
 ```js
 // 挂载在 vue 下
@@ -43,7 +104,7 @@ toast.close();
 
 ## Back-top
 
-#### API
+### API
 
 | 参数         | 说明               | 类型   | 可选值 | 默认值    |
 | ------------ | ------------------ | ------ | ------ | --------- |
@@ -51,13 +112,13 @@ toast.close();
 | custom-class | 自定义的类名       | String |        |           |
 | icon         | icon 类型          | String |        | arrow-top |
 
-#### Events
+### Events
 
 | 事件名称 | 说明         | 回调参数 |
 | -------- | ------------ | -------- |
 | click    | 点击按钮触发 | Event    |
 
-#### slot
+### slot
 
 | name | 描述           |
 | ---- | -------------- |
@@ -65,7 +126,7 @@ toast.close();
 
 ## Modal
 
-#### API
+### API
 
 | 参数           | 说明                              | 类型    | 可选值 | 默认值 |
 | -------------- | --------------------------------- | ------- | ------ | ------ |
@@ -73,7 +134,7 @@ toast.close();
 | lock-screen    | 是否锁定屏幕滚动                  | Boolean |        | true   |
 | visible        | 是否显示 Modal，支持 .sync 修饰符 | Boolean | false  |
 
-#### Events
+### Events
 
 | 事件名称 | 说明             | 回调参数 |
 | -------- | ---------------- | -------- |
@@ -82,7 +143,7 @@ toast.close();
 
 ## Popup
 
-#### API
+### API
 
 | 参数                 | 说明                              | 类型    | 可选值 | 默认值 |
 | -------------------- | --------------------------------- | ------- | ------ | ------ |
@@ -94,13 +155,13 @@ toast.close();
 | show-close           | 是否显示关闭按钮                  | Boolean |        | true   |
 | height               | Popup 的高度                      | String  |        | 80%    |
 
-#### slot
+### slot
 
 | name | 描述         |
 | ---- | ------------ |
 | -    | Popup 的内容 |
 
-#### Events
+### Events
 
 | 事件名称 | 说明             | 回调参数 |
 | -------- | ---------------- | -------- |
