@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(modal) {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background: $--color-black;
+  opacity: 0.2;
+}
+
+body.ms-modal-open {
+  box-sizing: border-box !important;
+  position: fixed !important;
+  width: 100% !important;
+}

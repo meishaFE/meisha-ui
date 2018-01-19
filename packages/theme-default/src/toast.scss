@@ -8,7 +8,6 @@
   opacity: 0;
 }
 
-
 @include b(toast) {
   @include font-dpr($--font-size-base);
   position: fixed;
@@ -24,7 +23,7 @@
 
   @include m(icon) {
     .ms-toast__text {
-      padding-top: 16px
+      padding-top: 16px;
     }
   }
   @include when(top) {
@@ -44,7 +43,7 @@
   }
 
   @include e(icon) {
-    font-size: 40px;
+    @include font-dpr( 40px);
   }
 
   @include e(text) {

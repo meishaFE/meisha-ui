@@ -5,5 +5,8 @@
   "tab-item": "./packages/tab-item/index.js",
   "toast": "./packages/toast/index.js",
   "float-button": "./packages/float-button/index.js",
-  "back-top": "./packages/back-top/index.js"
+  "back-top": "./packages/back-top/index.js",
+  "modal": "./packages/modal/index.js",
+  "dialog": "./packages/dialog/index.js",
+  "popup": "./packages/popup/index.js"
 }
