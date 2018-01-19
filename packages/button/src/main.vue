@@ -7,7 +7,6 @@
               size ? 'ms-button--' + size : '',
               {
                 'is-disabled': disabled,
-                'is-loading': loading,
                 'is-plain': plain,
               }
             ]"
