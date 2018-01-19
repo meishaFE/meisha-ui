@@ -43,9 +43,9 @@
 | ----------- | -------------- | ------- | --------------------------------- | ------- |
 | type        | 按钮类型       | String  | default, warning, danger, primary | default |
 | size        | 按钮尺寸       | String  | normal, small, mini               | normal  |
-| disabled    | 禁用按钮       | Boolean |                                   | false   |
-| plain       | 幽灵按钮       | Boolean |                                   | false   |
-| native-type | 按钮的原生类型 | String  |                                   |         |
+| disabled    | 禁用按钮       | Boolean | -                                 | false   |
+| plain       | 幽灵按钮       | Boolean | -                                 | false   |
+| native-type | 按钮的原生类型 | String  | -                                 | -       |
 
 ### slot
 
@@ -59,9 +59,9 @@
 
 | 参数          | 说明                                 | 类型     | 可选值 | 默认值 |
 | ------------- | ------------------------------------ | -------- | ------ | ------ |
-| icon          | 右侧显示的 icon                      | String   |        |        |
-| is-link       | 是否为链接，如果为链接默认显示右箭头 | Boolean  | false  | normal |
-| on-icon-click | 点击 icon 的回调                     | Function |        |        |
+| icon          | 右侧显示的 icon                      | String   | -      | -      |
+| is-link       | 是否为链接，如果为链接默认显示右箭头 | Boolean  | -      | false  |
+| on-icon-click | 点击 icon 的回调                     | Function | -      | -      |
 
 ### slot
 
@@ -92,20 +92,20 @@
 
 | 参数  | 说明                      | 类型    | 可选值 | 默认值 |
 | ----- | ------------------------- | ------- | ------ | ------ |
-| fixd  | 是否固定在底部            | Boolean |        | true   |
-| value | 绑定值，选中 tab 的 value | String  |        |        |
+| fixd  | 是否固定在底部            | Boolean | -      | true   |
+| value | 绑定值，选中 tab 的 value | String  | -      | -      |
 
 ### Footer-tab slot
 
 | 参数 | 说明              | 类型 | 可选值 | 默认值 |
 | ---- | ----------------- | ---- | ------ | ------ |
-| -    | Footer-tab 的内容 |      |        |        |
+| -    | Footer-tab 的内容 | -    | -      | -      |
 
 ### Tab-item API
 
 | 参数  | 说明     | 类型   | 可选值 | 默认值 |
 | ----- | -------- | ------ | ------ | ------ |
-| value | tab 的值 | String |        |        |
+| value | tab 的值 | String | -      | -      |
 
 ### Tab-item slot
 
@@ -135,9 +135,9 @@ toast.close();
 
 | 参数         | 说明               | 类型   | 可选值 | 默认值    |
 | ------------ | ------------------ | ------ | ------ | --------- |
-| show-height  | 按钮显示的滚动高度 | Number | 500    |
-| custom-class | 自定义的类名       | String |        |           |
-| icon         | icon 类型          | String |        | arrow-top |
+| show-height  | 按钮显示的滚动高度 | Number | -      | 500       |
+| custom-class | 自定义的类名       | String | -      | -         |
+| icon         | icon 类型          | String | -      | arrow-top |
 
 ### Events
 
@@ -157,16 +157,16 @@ toast.close();
 
 | 参数           | 说明                              | 类型    | 可选值 | 默认值 |
 | -------------- | --------------------------------- | ------- | ------ | ------ |
-| close-on-click | 是否可以点击关闭                  | Boolean |        | true   |
-| lock-screen    | 是否锁定屏幕滚动                  | Boolean |        | true   |
-| visible        | 是否显示 Modal，支持 .sync 修饰符 | Boolean | false  |
+| close-on-click | 是否可以点击关闭                  | Boolean | -      | true   |
+| lock-screen    | 是否锁定屏幕滚动                  | Boolean | -      | true   |
+| visible        | 是否显示 Modal，支持 .sync 修饰符 | Boolean | -      | false  |
 
 ### Events
 
 | 事件名称 | 说明             | 回调参数 |
 | -------- | ---------------- | -------- |
-| open     | Modal 打开的回调 |          |
-| close    | Modal 关闭的回调 |          |
+| open     | Modal 打开的回调 | -        |
+| close    | Modal 关闭的回调 | -        |
 
 ## Popup
 
@@ -174,13 +174,13 @@ toast.close();
 
 | 参数                 | 说明                              | 类型    | 可选值 | 默认值 |
 | -------------------- | --------------------------------- | ------- | ------ | ------ |
-| visible              | 是否显示 Popup，支持 .sync 修饰符 | Boolean | false  |
-| close-on-click-modal | 是否可以通过点击遮罩点击关闭      | Boolean |        | true   |
-| title                | 显示的标题                        | String  |        |        |
-| modal                | 是否需要遮罩                      | Boolean |        | true   |
-| custom-class         | 自定义的类名                      | String  |        |        |
-| show-close           | 是否显示关闭按钮                  | Boolean |        | true   |
-| height               | Popup 的高度                      | String  |        | 80%    |
+| visible              | 是否显示 Popup，支持 .sync 修饰符 | Boolean | -      | false  |
+| close-on-click-modal | 是否可以通过点击遮罩点击关闭      | Boolean | -      | true   |
+| title                | 显示的标题                        | String  | -      | -      |
+| modal                | 是否需要遮罩                      | Boolean | -      | true   |
+| custom-class         | 自定义的类名                      | String  | -      | -      |
+| show-close           | 是否显示关闭按钮                  | Boolean | -      | true   |
+| height               | Popup 的高度                      | String  | -      | 80%    |
 
 ### slot
 
@@ -192,5 +192,5 @@ toast.close();
 
 | 事件名称 | 说明             | 回调参数 |
 | -------- | ---------------- | -------- |
-| open     | Popup 打开的回调 |          |
-| close    | Popup 关闭的回调 |          |
+| open     | Popup 打开的回调 | -        |
+| close    | Popup 关闭的回调 | -        |
