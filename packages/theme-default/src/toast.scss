@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+.ms-toast-fade-enter,
+.ms-toast-fade-leave-active {
+  opacity: 0;
+}
+
+@include b(toast) {
+  @include font-dpr($--font-size-base);
+  position: fixed;
+  max-width: 80%;
+  color: $--color-white;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 1000;
+  transition: opacity 0.3s linear;
+  padding: 14px 26px;
+
+  @include m(icon) {
+    .ms-toast__text {
+      padding-top: 16px;
+    }
+  }
+  @include when(top) {
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  @include when(middle) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @include when(bottom) {
+    left: 50%;
+    bottom: 60px;
+    transform: translate(-50%, 0);
+  }
+
+  @include e(icon) {
+    @include font-dpr( 40px);
+  }
+
+  @include e(text) {
+    display: block;
+    text-align: center;
+  }
+}

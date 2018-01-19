@@ -1,7 +1,12 @@
 {
-  "pagination": "./packages/pagination/index.js",
+  "button": "./packages/button/index.js",
+  "cell": "./packages/cell/index.js",
+  "footer-tab": "./packages/footer-tab/index.js",
+  "tab-item": "./packages/tab-item/index.js",
+  "toast": "./packages/toast/index.js",
+  "float-button": "./packages/float-button/index.js",
+  "back-top": "./packages/back-top/index.js",
+  "modal": "./packages/modal/index.js",
   "dialog": "./packages/dialog/index.js",
-  "autocomplete": "./packages/autocomplete/index.js",
-  "dropdown": "./packages/dropdown/index.js",
-  "dropdown-menu": "./packages/dropdown-menu/index.js"
+  "popup": "./packages/popup/index.js"
 }

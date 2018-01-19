@@ -3,9 +3,11 @@
 > Mobile UI Components based on Vue.
 
 ## Links
-*TODO*
+
+_TODO_
 
 ## Install
+
 ```shell
 npm install meisha-ui -S
 
@@ -14,28 +16,43 @@ yarn add meisha-ui
 ```
 
 ## Quick Start
-```javascript
-import Vue from 'vue'
-import Meisha from 'meisha-ui'
 
-Vue.use(Meisha)
+```javascript
+import Vue from 'vue';
+import Meisha from 'meisha-ui';
+
+Vue.use(Meisha);
 ```
 
 ## Browser Support
-*TODO*
+
+_TODO_
+
+## Documentation
+
+* [Usage Guide](docs/guide.md)
 
 ## Development
 
 1. 请先 fork 一份到自己的项目下，不要直接在仓库下建分支。
 2. 开发环境搭建
-    ```shell
-    git clone git@github.com:meishaFE/meisha-ui.git
-    npm run dev
-    ```
+   ```shell
+   git clone git@github.com:meishaFE/meisha-ui.git
+   npm run dev
+   ```
+
+## TODO
+
+[Components todo](docs/TODO.md)
+
 ## npm scripts
+
 ```shell
 # 开始开发
 npm run dev
+
+# 添加新的组件
+npm run gen toast / npm run gen toast alert input
 
 # 单元测试
 npm run test
@@ -45,4 +62,5 @@ npm run dist
 ```
 
 ## LICENSE
+
 MIT

@@ -1,0 +1,103 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+.ms-popup-fade-enter-active {
+  animation: popup-fade-in 0.3s;
+}
+
+.ms-popup-fade-leave-active {
+  animation: popup-fade-out 0.3s;
+}
+
+@keyframes popup-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 1000px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes popup-fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 1000px, 0);
+  }
+}
+
+.ms-popup-modal-fade-enter-active {
+  animation: popup-modal-fade-in 0.3s;
+  animation-delay: 0.3s;
+}
+
+.ms-popup-modal-fade-leave-active {
+  animation: popup-modal-fade-out 0.3s;
+}
+
+@keyframes popup-modal-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes popup-modal-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}
+
+@include b(popup) {
+  @include e(inner) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $--color-white;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  @include e(header) {
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    position: relative;
+  }
+  @include e(title) {
+    @include font-dpr(16px);
+    color: #32353a;
+    text-align: center;
+    line-height: inherit;
+    height: inherit;
+  }
+  @include e(close) {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    @include font-dpr(14px);
+    transform: translateY(-50%);
+  }
+  @include e(body) {
+    overflow: scroll;
+  }
+}

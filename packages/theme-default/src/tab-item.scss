@@ -1,0 +1,34 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(tab-item) {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include e(icon) {
+    height: 21px;
+    margin-bottom: 3px;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  @include e(label) {
+    line-height: 1;
+    @include font-dpr($--font-size-mini);
+    color: $--color-text-fourthly;
+  }
+
+  @include when(activated) {
+    @include e(icon) {
+    }
+    @include e(label) {
+      color: $--color-primary;
+    }
+  }
+}

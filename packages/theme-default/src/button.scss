@@ -1,0 +1,100 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/button';
+@import 'mixins/utils';
+@include b(button) {
+  @include font-dpr($--font-size-large);
+  line-height: 1;
+
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  height: 50px;
+  margin: 0;
+
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-transform: none;
+
+  color: $--color-text-secondary;
+  border-width: 0;
+  border-style: solid;
+  border-radius: 4px;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  @include utils-user-select(none);
+
+  // size
+  @include m(normal) {
+    width: 100%;
+  }
+
+  @include m(small) {
+    @include font-dpr($--font-size-base);
+    display: inline-block;
+    padding: 0 20px;
+    @include when(disabled) {
+      color: mix($--color-white, $--color-text-secondary, 50%);
+    }
+  }
+
+  // type
+  @include m(default) {
+    background: $--button-background-color-default;
+
+    &:not(.is-disabled):active {
+      background: mix($--color-black, $--button-background-color-default, 5%);
+    }
+
+    @include when(plain) {
+      color: $--color-text-secondary;
+    }
+  }
+
+  @include m(primary) {
+    @include button-variant($--color-white, $--color-primary, $--color-primary);
+
+    @include when(plain) {
+      color: $--color-primary;
+    }
+  }
+
+  @include m(warning) {
+    @include button-variant($--color-white, $--color-warning, $--color-warning);
+    @include when(plain) {
+      color: $--color-warning;
+    }
+  }
+
+  @include m('danger') {
+    @include button-variant($--color-white, $--color-danger, $--color-danger);
+    @include when('plain') {
+      color: $--color-danger;
+    }
+  }
+
+  // disabled
+  @include when('disabled') {
+    cursor: not-allowed;
+  }
+
+  // plain
+  @include when('plain') {
+    border-width: 1px;
+    background: transparent;
+
+    &:not(.is-disabled):active {
+      background: mix($--color-black, $--button-background-color-default, 5%);
+    }
+  }
+}
