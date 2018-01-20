@@ -7,10 +7,13 @@
 * [Back-top](#back-top)
 * [Modal](#modal)
 * [Popup](#popup)
+* [Loading](#loading)
+* [Switch](#switch)
+* [Radio](#radio)
 
 ## Button
 
-[examples]('../examples/components/button.vue')
+[examples](../examples/components/button.vue)
 
 ### Demo
 
@@ -39,7 +42,7 @@
 
 ## Cell
 
-[examples]('../examples/components/cell.vue')
+[examples](../examples/components/cell.vue)
 
 ### API
 
@@ -57,7 +60,7 @@
 
 ## Footer-tab & Tab-item
 
-[examples]('../examples/components/footer-tab.vue')
+[examples](../examples/components/footer-tab.vue)
 
 ### Demo
 
@@ -104,7 +107,7 @@
 
 ## Toast
 
-[examples]('../examples/components/toast.vue')
+[examples](../examples/components/toast.vue)
 
 ### Demo
 
@@ -133,7 +136,7 @@ toast.close();
 
 ## Back-top
 
-[examples]('../examples/components/back-top.vue')
+[examples](../examples/components/back-top.vue)
 
 ### API
 
@@ -157,7 +160,7 @@ toast.close();
 
 ## Modal
 
-[examples]('../examples/components/modal.vue')
+[examples](../examples/components/modal.vue)
 
 ### API
 
@@ -176,7 +179,7 @@ toast.close();
 
 ## Popup
 
-[examples]('../examples/components/popup.vue')
+[examples](../examples/components/popup.vue)
 
 ### API
 
@@ -205,7 +208,7 @@ toast.close();
 
 ## Loading
 
-[examples]('../examples/components/loading.vue')
+[examples](../examples/components/loading.vue)
 
 ### Demo
 
@@ -231,7 +234,7 @@ l.close();
 
 ## Switch
 
-[examples]('../examples/components/switch.vue')
+[examples](../examples/components/switch.vue)
 
 ### API
 
@@ -254,3 +257,34 @@ l.close();
 | 事件名称 | 说明                    | 回调参数 |
 | -------- | ----------------------- | -------- |
 | change   | Switch 绑定的值改变事件 | value    |
+
+## Radio
+
+[examples](../examples/components/radio.vue)
+
+### TODO
+
+1. 按钮样式的 radio
+2. 边框样式的 radio
+
+### API
+
+| 参数        | 说明                 | 类型    | 可选值 | 默认值  |
+| ----------- | -------------------- | ------- | ------ | ------- |
+| value       | 绑定值               | Boolean | -      | true    |
+| size        | Radio 的大小（像素） | Number  | -      | 20      |
+| disabled    | 是否禁用             | Boolean | -      | false   |
+| borderColor | Radio 的边框色       | String  | -      | #eff2f7 |
+| activeColor | Radio 选中时的背景色 | String  | -      | #00ca9d |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | Radio Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
+| change   | Radio 绑定的值改变事件 | value    |

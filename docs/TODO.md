@@ -4,13 +4,13 @@
 * [x] Back-top
 * [x] Footer-tab
 * [x] Modal
-* [ ] popup
+* [x] popup
 * [ ] Dialog
 * [ ] Message Box
 * [ ] Input
-* [ ] Switch
+* [x] Switch
 * [ ] Checkbox
-* [ ] Radio
+* [x] Radio
 * [ ] Picker
 * [ ] Datetime Picker
 * [ ] Range

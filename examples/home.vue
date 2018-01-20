@@ -27,6 +27,9 @@
         <ms-cell is-link>
             <router-link :to="{path: '/switch'}">switch</router-link>
         </ms-cell>
+         <ms-cell is-link>
+            <router-link :to="{path: '/radio'}">radio</router-link>
+        </ms-cell>
     </div>
 </template>
 

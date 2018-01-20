@@ -1,7 +1,7 @@
 <template>
     <div style="background: #fff; height: 500px; padding: 10px;">
         <h3>普通使用</h3>
-        <ms-switch v-model="value">测试</ms-switch>
+        <ms-switch v-model="value"></ms-switch>
         <h3>带 label</h3>
         <ms-switch v-model="value2">这是 label</ms-switch>
         <h3>禁用状态</h3>
