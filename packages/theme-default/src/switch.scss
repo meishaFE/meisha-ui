@@ -6,11 +6,6 @@
 @include b(switch) {
   display: inline-flex;
   align-items: center;
-  position: relative;
-  vertical-align: middle;
-  height: 26px;
-  line-height: 26px;
-  vertical-align: middle;
   @include font-dpr($--font-size-base);
 
   position: relative;
