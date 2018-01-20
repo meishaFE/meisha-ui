@@ -41,6 +41,10 @@ export default new Router({
     {
       path: '/loading',
       component: () => import('../components/loading.vue')
+    },
+    {
+      path: '/switch',
+      component: () => import('../components/switch.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

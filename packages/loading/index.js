@@ -5,8 +5,6 @@ const LoadingCtor = Vue.extend(Main);
 const DEFAULT_TEXT = '加载中...';
 let loadingInstance;
 
-console.log(LoadingCtor.text);
-
 LoadingCtor.prototype.close = () => {
   if (loadingInstance) {
     loadingInstance.visible = false;

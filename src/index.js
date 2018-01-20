@@ -11,6 +11,16 @@ import Modal from '../packages/modal/index.js';
 import Dialog from '../packages/dialog/index.js';
 import Popup from '../packages/popup/index.js';
 import Loading from '../packages/loading/index.js';
+import Radio from '../packages/radio/index.js';
+import Input from '../packages/input/index.js';
+import Label from '../packages/label/index.js';
+import Selector from '../packages/selector/index.js';
+import Checkbox from '../packages/checkbox/index.js';
+import Picker from '../packages/picker/index.js';
+import Collapse from '../packages/collapse/index.js';
+import Badge from '../packages/badge/index.js';
+import Carousel from '../packages/carousel/index.js';
+import Switch from '../packages/switch/index.js';
 
 const components = [
   Button,
@@ -21,7 +31,17 @@ const components = [
   BackTop,
   Modal,
   Dialog,
-  Popup
+  Popup,
+  Radio,
+  Input,
+  Label,
+  Selector,
+  Checkbox,
+  Picker,
+  Collapse,
+  Badge,
+  Carousel,
+  Switch
 ];
 
 const install = function(Vue, opts = {}) {
@@ -50,7 +70,17 @@ module.exports = {
   Modal,
   Dialog,
   Popup,
-  Loading
+  Loading,
+  Radio,
+  Input,
+  Label,
+  Selector,
+  Checkbox,
+  Picker,
+  Collapse,
+  Badge,
+  Carousel,
+  Switch
 };
 
 module.exports.default = module.exports;

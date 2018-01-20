@@ -9,5 +9,15 @@
   "modal": "./packages/modal/index.js",
   "dialog": "./packages/dialog/index.js",
   "popup": "./packages/popup/index.js",
-  "loading": "./packages/loading/index.js"
+  "loading": "./packages/loading/index.js",
+  "radio": "./packages/radio/index.js",
+  "input": "./packages/input/index.js",
+  "label": "./packages/label/index.js",
+  "selector": "./packages/selector/index.js",
+  "checkbox": "./packages/checkbox/index.js",
+  "picker": "./packages/picker/index.js",
+  "collapse": "./packages/collapse/index.js",
+  "badge": "./packages/badge/index.js",
+  "carousel": "./packages/carousel/index.js",
+  "switch": "./packages/switch/index.js"
 }

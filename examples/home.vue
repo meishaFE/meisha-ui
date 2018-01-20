@@ -24,6 +24,9 @@
         <ms-cell is-link>
             <router-link :to="{path: '/loading'}">loading</router-link>
         </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/switch'}">switch</router-link>
+        </ms-cell>
     </div>
 </template>
 
