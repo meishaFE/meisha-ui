@@ -12,6 +12,7 @@ const to = scrollTop => {
 };
 export default {
   name: 'MsModal',
+
   props: {
     visible: {
       type: Boolean,
@@ -26,17 +27,20 @@ export default {
       default: true
     }
   },
+
   data() {
     return {
       closed: false,
       scrollTop: 0
     };
   },
+
   mounted() {
     if (this.visible) {
       this.open();
     }
   },
+
   methods: {
     handleClick() {
       if (!this.closeOnClick) return;
@@ -63,6 +67,7 @@ export default {
       to(this.scrollTop);
     }
   },
+
   watch: {
     visible(val) {
       if (val) {

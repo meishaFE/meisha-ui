@@ -20,6 +20,7 @@ yarn add meisha-ui
 ```javascript
 import Vue from 'vue';
 import Meisha from 'meisha-ui';
+import 'meisha-ui/lib/styles/index.css';
 
 Vue.use(Meisha);
 ```

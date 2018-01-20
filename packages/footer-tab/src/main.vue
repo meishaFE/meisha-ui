@@ -8,6 +8,7 @@
 <script>
 export default {
   name: 'MsFooterTab',
+
   props: {
     fixed: {
       type: Boolean,

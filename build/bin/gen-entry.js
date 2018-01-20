@@ -21,6 +21,7 @@ const install = function(Vue, opts = {}) {
   });
 
   Vue.prototype.$toast = Toast;
+  Vue.prototype.$loading = Loading;
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -60,7 +61,8 @@ module.exports.default = module.exports;
         })
       );
     }
-    if (componentName !== 'Loading') listTemplate.push(`  ${componentName}`);
+
+    listTemplate.push(`  ${componentName}`);
 
     let template = render(MAIN_TEMPLATE, {
       include: includeComponentTemplate.join(endOfLine),

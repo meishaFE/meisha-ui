@@ -10,6 +10,7 @@ import BackTop from '../packages/back-top/index.js';
 import Modal from '../packages/modal/index.js';
 import Dialog from '../packages/dialog/index.js';
 import Popup from '../packages/popup/index.js';
+import Loading from '../packages/loading/index.js';
 
 const components = [
   Button,
@@ -29,6 +30,7 @@ const install = function(Vue, opts = {}) {
   });
 
   Vue.prototype.$toast = Toast;
+  Vue.prototype.$loading = Loading;
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -47,7 +49,8 @@ module.exports = {
   BackTop,
   Modal,
   Dialog,
-  Popup
+  Popup,
+  Loading
 };
 
 module.exports.default = module.exports;

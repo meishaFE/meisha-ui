@@ -45,6 +45,7 @@
 | size        | 按钮尺寸       | String  | normal, small, mini               | normal  |
 | disabled    | 禁用按钮       | Boolean | -                                 | false   |
 | plain       | 幽灵按钮       | Boolean | -                                 | false   |
+| round       | 按钮的圆角     | String  | -                                 | -       |
 | native-type | 按钮的原生类型 | String  | -                                 | -       |
 
 ### slot
@@ -194,3 +195,6 @@ toast.close();
 | -------- | ---------------- | -------- |
 | open     | Popup 打开的回调 | -        |
 | close    | Popup 关闭的回调 | -        |
+
+
+## Loading

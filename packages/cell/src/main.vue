@@ -17,6 +17,7 @@
 <script>
 export default {
   name: 'MsCell',
+
   props: {
     icon: {
       type: String
@@ -29,6 +30,7 @@ export default {
       type: Function
     }
   },
+
   methods: {
     handleIconClick(evt) {
       if (this.onIconClick) this.onIconClick(evt);
