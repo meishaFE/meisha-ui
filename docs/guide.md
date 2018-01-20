@@ -7,6 +7,9 @@
 * [Back-top](#back-top)
 * [Modal](#modal)
 * [Popup](#popup)
+* [Loading](#loading)
+* [Switch](#switch)
+* [Radio](#radio)
 
 ## Button
 
@@ -276,12 +279,12 @@ l.close();
 
 ### slot
 
-| name | 描述                |
-| ---- | ------------------- |
+| name | 描述               |
+| ---- | ------------------ |
 | -    | Radio Label 的内容 |
 
 ### Events
 
-| 事件名称 | 说明                    | 回调参数 |
-| -------- | ----------------------- | -------- |
+| 事件名称 | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
 | change   | Radio 绑定的值改变事件 | value    |
