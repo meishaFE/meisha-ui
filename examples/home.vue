@@ -1,0 +1,43 @@
+<template>
+    <div style="padding-top: 20px;">
+        <ms-cell is-link>
+            <router-link :to="{path: '/button'}">button</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/cell'}">cell</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/footer-tab'}">footer-tab</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/toast'}">toast</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/back-top'}">back-top</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/modal'}">modal</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/popup'}">popup</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/loading'}">loading</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/switch'}">switch</router-link>
+        </ms-cell>
+    </div>
+</template>
+
+<script>
+export default {
+  name: 'home'
+};
+</script>
+<style lang="scss" scoped>
+a {
+  color: #00ca9d;
+  display: block;
+}
+</style>

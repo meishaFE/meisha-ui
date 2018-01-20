@@ -35,6 +35,7 @@
  */
 export default {
   name: 'MsButton',
+
   props: {
     type: {
       type: String,
@@ -47,7 +48,7 @@ export default {
       type: String,
       default: 'normal',
       validator(value) {
-        return !!~['small', 'normal'].indexOf(value);
+        return !!~['mini', 'small', 'normal'].indexOf(value);
       }
     },
     nativeType: {
@@ -60,6 +61,7 @@ export default {
       type: String
     }
   },
+
   methods: {
     handleClick(evt) {
       this.$emit('click', evt);
@@ -68,6 +70,7 @@ export default {
       this.disabled && evt.stopPropagation();
     }
   },
+
   computed: {
     buttonBorder() {
       return {

@@ -18,6 +18,7 @@
 import scrollToTop from './scroll-to-top';
 export default {
   name: 'MsBackTop',
+
   props: {
     showHeight: {
       type: Number,
@@ -32,11 +33,13 @@ export default {
       default: ''
     }
   },
+
   data() {
     return {
       isShow: false
     };
   },
+
   created() {
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('rezise', this.handleScroll);

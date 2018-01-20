@@ -10,6 +10,7 @@
     <h2>size</h2>
     <ms-button size="normal">button normal</ms-button>
     <ms-button size="small">button small</ms-button>
+    <ms-button size="mini">button mini</ms-button>
     <!-- disabled -->
     <h2>disabled</h2>
     <ms-button :disabled="true">button disabled</ms-button>
@@ -26,7 +27,7 @@
 
     <!-- round -->
     <h2>round</h2>
-    <ms-button size="small" round="100px">button has round</ms-button>
+    <ms-button size="small" round="100px">button custom round</ms-button>
   </div>
 </template>
 
