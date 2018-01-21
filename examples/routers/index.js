@@ -7,6 +7,10 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '',
+      component: () => import('../home.vue')
+    },
+    {
       path: '/button',
       component: () => import('../components/button.vue')
     },
@@ -33,6 +37,18 @@ export default new Router({
     {
       path: '/popup',
       component: () => import('../components/popup.vue')
+    },
+    {
+      path: '/loading',
+      component: () => import('../components/loading.vue')
+    },
+    {
+      path: '/switch',
+      component: () => import('../components/switch.vue')
+    },
+    {
+      path: '/radio',
+      component: () => import('../components/radio.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

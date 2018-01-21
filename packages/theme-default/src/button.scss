@@ -13,7 +13,6 @@
   overflow: hidden;
 
   box-sizing: border-box;
-  height: 50px;
   margin: 0;
 
   cursor: pointer;
@@ -36,21 +35,30 @@
 
   // size
   @include m(normal) {
+    height: 50px;
     width: 100%;
   }
 
   @include m(small) {
     @include font-dpr($--font-size-base);
     display: inline-block;
+    height: 50px;
     padding: 0 20px;
+
     @include when(disabled) {
       color: mix($--color-white, $--color-text-secondary, 50%);
     }
   }
 
+  @include m(mini) {
+    @include font-dpr($--font-size-small);
+    display: inline-block;
+    padding: 7px 21px;
+  }
+
   // type
   @include m(default) {
-    background: $--button-background-color-default;
+    @include button-variant($--color-black, $--button-background-color-default, $--button-background-color-default, $--color-text-secondary);
 
     &:not(.is-disabled):active {
       background: mix($--color-black, $--button-background-color-default, 5%);

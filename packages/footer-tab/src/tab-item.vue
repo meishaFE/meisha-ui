@@ -14,7 +14,9 @@
 <script>
 export default {
   name: 'MsTabItem',
+
   props: ['value'],
+
   methods: {
     handleTabItemClick(evt) {
       this.$parent.$emit('input', this.value, evt);

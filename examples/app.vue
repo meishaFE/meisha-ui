@@ -1,6 +1,9 @@
 <template>
     <div>
-        <h1>Meisha-UI</h1>
+      <div>
+        <h1 style="display: inline; margin-right: 20px;">Meisha-UI</h1>
+        <router-link to="/">HomePage</router-link>
+      </div>
         <router-view></router-view>
     </div>
 </template>
@@ -42,7 +45,6 @@ body {
   font-family: -apple-system-font, 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
   background: #d9dddc;
 }
 
@@ -111,6 +113,7 @@ textarea {
 }
 
 a {
+  color: #00ca9d;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

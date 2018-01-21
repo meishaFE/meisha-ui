@@ -1,33 +1,19 @@
 # Guide
 
 * [Button](#button)
-  * [Demo](#demo)
-  * [API](#api)
-  * [slot](#slot)
 * [Cell](#cell)
-  * [API](#api)
-  * [slot](#slot)
 * [Footer-tab & Tab-item](#footer-tab-tab-item)
-  * [Demo](#demo)
-  * [Footer-tab API](#footer-tab-api)
-  * [Footer-tab slot](#footer-tab-slot)
-  * [Tab-item API](#tab-item-api)
-  * [Tab-item slot](#tab-item-slot)
 * [Toast](#toast)
-  * [Demo](#demo)
 * [Back-top](#back-top)
-  * [API](#api)
-  * [Events](#events)
-  * [slot](#slot)
 * [Modal](#modal)
-  * [API](#api)
-  * [Events](#events)
 * [Popup](#popup)
-  * [API](#api)
-  * [slot](#slot)
-  * [Events](#events)
+* [Loading](#loading)
+* [Switch](#switch)
+* [Radio](#radio)
 
 ## Button
+
+[examples](../examples/components/button.vue)
 
 ### Demo
 
@@ -39,13 +25,14 @@
 
 ### API
 
-| 参数        | 说明           | 类型    | 可选值                            | 默认值  |
-| ----------- | -------------- | ------- | --------------------------------- | ------- |
-| type        | 按钮类型       | String  | default, warning, danger, primary | default |
-| size        | 按钮尺寸       | String  | normal, small, mini               | normal  |
-| disabled    | 禁用按钮       | Boolean | -                                 | false   |
-| plain       | 幽灵按钮       | Boolean | -                                 | false   |
-| native-type | 按钮的原生类型 | String  | -                                 | -       |
+| 参数        | 说明           | 类型    | 可选值                               | 默认值  |
+| ----------- | -------------- | ------- | ------------------------------------ | ------- |
+| type        | 按钮类型       | String  | default / warning / danger / primary | default |
+| size        | 按钮尺寸       | String  | normal / small / mini                | normal  |
+| disabled    | 禁用按钮       | Boolean | -                                    | false   |
+| plain       | 幽灵按钮       | Boolean | -                                    | false   |
+| round       | 按钮的圆角     | String  | -                                    | -       |
+| native-type | 按钮的原生类型 | String  | -                                    | -       |
 
 ### slot
 
@@ -54,6 +41,8 @@
 | -    | 显示的文本内容 |
 
 ## Cell
+
+[examples](../examples/components/cell.vue)
 
 ### API
 
@@ -70,6 +59,8 @@
 | -    | Cell 的内容 |
 
 ## Footer-tab & Tab-item
+
+[examples](../examples/components/footer-tab.vue)
 
 ### Demo
 
@@ -116,6 +107,8 @@
 
 ## Toast
 
+[examples](../examples/components/toast.vue)
+
 ### Demo
 
 ```js
@@ -123,13 +116,27 @@
 Vue.prototype.$toast('操作');
 this.$toast('操作');
 
+this.$toast.success('操作'); // 成功的提示
+
 // 单独引入
 import { Toast } from 'meisha-ui';
 const toast = Toast('操作');
 toast.close();
 ```
 
+### options
+
+| 参数        | 说明                          | 类型   | 可选值                | 默认值 |
+| ----------- | ----------------------------- | ------ | --------------------- | ------ |
+| message     | Toast 显示的文本内容          | String | -                     | -      |
+| position    | Toast 显示的位置              | String | top / middle / bottom | middle |
+| customClass | 自定义的 class                | String | -                     | -      |
+| iconClass   | icon 的 class                 | String | -                     | -      |
+| type        | 提示的类型，会显示对应的 icon | String | success / error       | -      |
+
 ## Back-top
+
+[examples](../examples/components/back-top.vue)
 
 ### API
 
@@ -153,6 +160,8 @@ toast.close();
 
 ## Modal
 
+[examples](../examples/components/modal.vue)
+
 ### API
 
 | 参数           | 说明                              | 类型    | 可选值 | 默认值 |
@@ -169,6 +178,8 @@ toast.close();
 | close    | Modal 关闭的回调 | -        |
 
 ## Popup
+
+[examples](../examples/components/popup.vue)
 
 ### API
 
@@ -194,3 +205,86 @@ toast.close();
 | -------- | ---------------- | -------- |
 | open     | Popup 打开的回调 | -        |
 | close    | Popup 关闭的回调 | -        |
+
+## Loading
+
+[examples](../examples/components/loading.vue)
+
+### Demo
+
+```js
+import { Loading } from 'meisha-ui';
+
+let l = Loading(); // 会返回 loading 实例，可以使用 close 方法关闭
+
+l.close();
+
+// 或者在组件内的方法
+
+let l = this.$loading();
+
+l.close();
+```
+
+### options
+
+| 参数 | 说明                   | 类型   | 可选值 | 默认值    |
+| ---- | ---------------------- | ------ | ------ | --------- |
+| text | loading 显示的文本内容 | String | -      | 加载中... |
+
+## Switch
+
+[examples](../examples/components/switch.vue)
+
+### API
+
+| 参数          | 说明                  | 类型    | 可选值 | 默认值  |
+| ------------- | --------------------- | ------- | ------ | ------- |
+| value         | 绑定值                | Boolean | -      | true    |
+| width         | Switch 的宽度（像素） | Number  | -      | 48      |
+| disabled      | 是否禁用              | Boolean | -      | false   |
+| inactiveColor | Switch 关闭时的背景色 | String  | -      | #dbdee4 |
+| activeColor   | switch 打开时的背景色 | String  | -      | #00ca9d |
+
+### slot
+
+| name | 描述                |
+| ---- | ------------------- |
+| -    | Switch Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                    | 回调参数 |
+| -------- | ----------------------- | -------- |
+| change   | Switch 绑定的值改变事件 | value    |
+
+## Radio
+
+[examples](../examples/components/radio.vue)
+
+### TODO
+
+1. 按钮样式的 radio
+2. 边框样式的 radio
+
+### API
+
+| 参数        | 说明                 | 类型    | 可选值 | 默认值  |
+| ----------- | -------------------- | ------- | ------ | ------- |
+| value       | 绑定值               | Boolean | -      | true    |
+| size        | Radio 的大小（像素） | Number  | -      | 20      |
+| disabled    | 是否禁用             | Boolean | -      | false   |
+| borderColor | Radio 的边框色       | String  | -      | #eff2f7 |
+| activeColor | Radio 选中时的背景色 | String  | -      | #00ca9d |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | Radio Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
+| change   | Radio 绑定的值改变事件 | value    |
