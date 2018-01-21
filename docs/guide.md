@@ -130,8 +130,8 @@ toast.close();
 | ----------- | ----------------------------- | ------ | --------------------- | ------ |
 | message     | Toast 显示的文本内容          | String | -                     | -      |
 | position    | Toast 显示的位置              | String | top / middle / bottom | middle |
-| customClass | 自定义的 class                | String | -                     | -      |
-| iconClass   | icon 的 class                 | String | -                     | -      |
+| custom-class | 自定义的 class                | String | -                     | -      |
+| icon-class   | icon 的 class                 | String | -                     | -      |
 | type        | 提示的类型，会显示对应的 icon | String | success / error       | -      |
 
 ## Back-top
@@ -243,8 +243,8 @@ l.close();
 | value         | 绑定值                | Boolean | -      | true    |
 | width         | Switch 的宽度（像素） | Number  | -      | 48      |
 | disabled      | 是否禁用              | Boolean | -      | false   |
-| inactiveColor | Switch 关闭时的背景色 | String  | -      | #dbdee4 |
-| activeColor   | switch 打开时的背景色 | String  | -      | #00ca9d |
+| inactive-color | Switch 关闭时的背景色 | String  | -      | #dbdee4 |
+| active-color   | switch 打开时的背景色 | String  | -      | #00ca9d |
 
 ### slot
 
@@ -269,13 +269,15 @@ l.close();
 
 ### API
 
-| 参数        | 说明                 | 类型    | 可选值 | 默认值  |
-| ----------- | -------------------- | ------- | ------ | ------- |
-| value       | 绑定值               | Boolean | -      | true    |
-| size        | Radio 的大小（像素） | Number  | -      | 20      |
-| disabled    | 是否禁用             | Boolean | -      | false   |
-| borderColor | Radio 的边框色       | String  | -      | #eff2f7 |
-| activeColor | Radio 选中时的背景色 | String  | -      | #00ca9d |
+| 参数         | 说明                                 | 类型    | 可选值 | 默认值  |
+| ------------ | ------------------------------------ | ------- | ------ | ------- |
+| value        | 绑定值                               | Boolean | -      | true    |
+| size         | Radio 的大小（像素）                 | Number  | -      | 20      |
+| disabled     | 是否禁用                             | Boolean | -      | false   |
+| border-color  | Radio 的边框色                       | String  | -      | #eff2f7 |
+| active-color  | Radio 选中时的背景色                 | String  | -      | #00ca9d |
+| button       | Radio 显示为 button 样式             | Boolean | -      | false   |
+| button-round | Radio 显示为 button 样式时自定义圆角 | String  | -      | 4px     |
 
 ### slot
 

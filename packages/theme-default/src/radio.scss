@@ -42,9 +42,28 @@
     opacity: 0.3;
   }
 
+  @include when(button) {
+    border: 1px solid #dadfe6;
+    border-radius: 4px;
+    padding: 7px 15px;
+
+    .ms-radio__label {
+      margin-left: 0;
+    }
+
+    &.is-checked {
+      color: #00ca9d;
+      border: 1px solid #00ca9d;
+    }
+
+    &.is-disabled {
+      border: 1px solid #dadfe6;
+    }
+  }
+
   @include e(label) {
-    @include font-dpr($--font-size-base);
-    color: $--color-text-regular;
+    @include font-dpr($--font-size-small);
+    color: $--color-text-secondary;
     margin-left: 10px;
 
     &:empty {
