@@ -6,6 +6,35 @@
                   @close="handleClose"
                   @open="handleOpen">
             <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
+            <p>这是内容</p>
             <ms-button size="small"
                        @click="popupVisible = false"
                        type="primary">关闭 popup</ms-button>

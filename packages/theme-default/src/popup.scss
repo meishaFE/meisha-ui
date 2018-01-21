@@ -98,6 +98,7 @@
     transform: translateY(-50%);
   }
   @include e(body) {
+    height: calc(100% - 60px);
     overflow: scroll;
   }
 }

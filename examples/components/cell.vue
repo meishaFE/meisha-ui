@@ -2,7 +2,7 @@
   <div class="ms-cell-example">
     <h2>cell</h2>
     <ms-cell is-link @click.native="handleListClick">test 3</ms-cell>
-    <ms-cell @click.native="handleListClick">test 2</ms-cell>
+    <ms-cell is-link @click.native="handleListClick">test2asdfasfa asfasfasfasfasdfasdfasdsasgasg</ms-cell>
   </div>
 </template>
 <script>

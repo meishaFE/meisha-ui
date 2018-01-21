@@ -73,7 +73,7 @@ export default {
       if (val) {
         this.open();
       } else {
-        if (!this.closed) this.$emit('close');
+        if (!this.closed) this.close();
       }
     }
   }
