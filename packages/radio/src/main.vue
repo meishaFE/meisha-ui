@@ -1,13 +1,15 @@
 <template>
     <label class="ms-radio"
-           :class="{'is-checked': model === label, 'is-disabled': disabled}">
+           :class="{'is-checked': model === label, 'is-disabled': disabled, 'is-button': button}"
+           :style="{[this.buttonRound && button ? 'borderRadius' : '']: this.buttonRound}">
         <input class="ms-radio__input"
                v-model="model"
                :disabled="disabled"
                :value="label"
                type="radio"
                @change="$emit('change', model)">
-        <span class="ms-radio__core"
+        <span v-if="!button"
+              class="ms-radio__core"
               :style="{width: size + 'px', height: size + 'px', borderColor: borderColor}"
               ref="core">
             <span class="ms-radio__dot"
@@ -42,6 +44,13 @@ export default {
     activeColor: {
       type: String,
       default: '#00ca9d'
+    },
+    button: {
+      type: Boolean,
+      default: false
+    },
+    buttonRound: {
+      type: String
     }
   },
 
