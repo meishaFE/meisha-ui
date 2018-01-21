@@ -24,9 +24,15 @@
     width: 100%;
 
     border-bottom: 1px solid #eff2f7;
+  }
 
-    @include when(link) {
-      cursor: pointer;
+  @include e(content) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include when(icon) {
+      width: 94%;
     }
   }
 
@@ -43,5 +49,11 @@
     vertical-align: middle;
 
     color: $--color-text-secondary;
+  }
+
+  &:last-child {
+    .ms-cell__inner {
+      border-bottom: none;
+    }
   }
 }
