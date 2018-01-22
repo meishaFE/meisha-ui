@@ -4,7 +4,8 @@
             <div class="ms-popup__inner"
                  :style="{height: height}"
                  v-show="visible">
-                <div class="ms-popup__header">
+                <div class="ms-popup__header"
+                     v-show="title || $slots.header">
                     <slot name="header">
                         <div class="ms-popup__title">{{ title }}</div>
                         <div v-if="showClose">
@@ -63,6 +64,10 @@ export default {
     height: {
       type: String,
       default: '80%'
+    },
+    showHeader: {
+      type: Boolean,
+      default: true
     }
   },
 

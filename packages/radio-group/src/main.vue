@@ -1,9 +1,13 @@
 <template>
-<div></div>
+<div class="ms-radio-group"></div>
 </template>
 
 <script>
+// 挂起
+import MsCell from '../../cell/src/main';
 export default {
-  name: 'MsRadioGroup'
+  name: 'MsRadioGroup',
+
+  components: { MsCell }
 };
 </script>

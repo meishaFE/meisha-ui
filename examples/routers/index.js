@@ -53,6 +53,14 @@ export default new Router({
     {
       path: '/input',
       component: () => import('../components/input.vue')
+    },
+    {
+      path: '/textarea',
+      component: () => import('../components/textarea.vue')
+    },
+    {
+      path: '/input-number',
+      component: () => import('../components/input-number.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

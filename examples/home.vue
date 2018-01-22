@@ -33,6 +33,12 @@
         <ms-cell is-link>
             <router-link :to="{path: '/input'}">input</router-link>
         </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/textarea'}">textarea</router-link>
+      </ms-cell>
+       <ms-cell is-link>
+            <router-link :to="{path: '/input-number'}">input-number</router-link>
+      </ms-cell>
     </div>
 </template>
 

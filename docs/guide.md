@@ -1,16 +1,17 @@
 # Guide
 
-  - [Button](#button)
-  - [Cell](#cell)
-  - [Footer-tab & Tab-item](#footer-tab-tab-item)
-  - [Toast](#toast)
-  - [Back-top](#back-top)
-  - [Modal](#modal)
-  - [Popup](#popup)
-  - [Loading](#loading)
-  - [Switch](#switch)
-  - [Radio](#radio)
-  - [Input](#input)
+* [Button](#button)
+* [Cell](#cell)
+* [Footer-tab & Tab-item](#footer-tab-tab-item)
+* [Toast](#toast)
+* [Back-top](#back-top)
+* [Modal](#modal)
+* [Popup](#popup)
+* [Loading](#loading)
+* [Switch](#switch)
+* [Radio](#radio)
+* [Input](#input)
+* [Textarea](#textarea)
 
 ## Button
 
@@ -290,7 +291,7 @@ l.close();
 
 ## Input
 
-[examples](../examples/components/input.vue)
+[examples](../examples/components/textarea.vue)
 
 ### TODO
 
@@ -319,4 +320,59 @@ l.close();
 
 | 事件名称 | 说明                   | 回调参数 |
 | -------- | ---------------------- | -------- |
-| change   | Radio 绑定的值改变事件 | value    |
+| change   | Input 绑定的值改变事件 | value    |
+
+## Textarea
+
+[examples](../examples/components/input.vue)
+
+### TODO
+
+1. 表单校验
+
+### API
+
+| 参数        | 说明                    | 类型    | 可选值 | 默认值 |
+| ----------- | ----------------------- | ------- | ------ | ------ |
+| value       | 绑定值                  | Boolean | -      | true   |
+| rows        | Textarea 的 rows        | Number  | -      | 4      |
+| disabled    | 是否禁用                | Boolean | -      | false  |
+| readonly    | 是否只读                | Boolean | -      | false  |
+| label       | Textarea 的 label       | String  | -      | -      |
+| placeholder | Textarea 的 placeholder | String  | -      | -      |
+| required    | Textarea 是否必填       | Boolean | -      | false  |
+
+### slot
+
+| name | 描述                  |
+| ---- | --------------------- |
+| -    | Textarea Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                      | 回调参数 |
+| -------- | ------------------------- | -------- |
+| change   | Textarea 绑定的值改变事件 | value    |
+
+## Input-Number
+
+### API
+
+| 参数     | 说明                   | 类型    | 可选值         | 默认值    |
+| -------- | ---------------------- | ------- | -------------- | --------- |
+| value    | 绑定值                 | Boolean | -              | true      |
+| step     | 计数器步长             | Number  | -              | 1         |
+| min      | 计数器允许的最小值     | Number  | -              | -Infinity |
+| max      | 计数器允许的最大值     | Number  | -              | Infinity  |
+| size     | 计数器尺寸             | String  | normal / small | normal    |
+| disabled | 是否禁用               | Boolean | -              | false     |
+| controls | 是否使用控制按钮       | Boolean | -              | false     |
+| debounce | 输入时的去抖延迟，毫秒 | Number  | -              | 300       |
+
+### Events
+
+| 事件名称 | 说明                        | 回调参数       |
+| -------- | --------------------------- | -------------- |
+| change   | 绑定值被改变时触发          | 最后变更的值   |
+| blur     | 组件的 Input 失去焦点时触发 | (event: Event) |
+| focus    | 组件的 Input 获得焦点时触发 | (event: Event) |
