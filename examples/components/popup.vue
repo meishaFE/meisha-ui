@@ -2,9 +2,10 @@
     <div>
         <ms-button @click="showPopup">显示 popup</ms-button>
         <ms-button @click="showSlotPopup">显示 自定义 header 的 popup</ms-button>
+        <ms-button @click="showNoTitlePopup">显示 没有 header 的 popup</ms-button>
         <ms-popup :visible.sync="popupVisible"
-                  title="popup 标题"
                   @close="handleClose"
+                  title="标题"
                   @open="handleOpen">
             <p>这是内容</p>
             <p>这是内容</p>
@@ -46,6 +47,9 @@
             </div>
             <span>内容</span>
         </ms-popup>
+         <ms-popup :visible.sync="popupVisible3">
+            <span>内容</span>
+        </ms-popup>
     </div>
 </template>
 
@@ -55,7 +59,8 @@ export default {
   data() {
     return {
       popupVisible: false,
-      popupVisible2: false
+      popupVisible2: false,
+      popupVisible3: false
     };
   },
   methods: {
@@ -70,6 +75,9 @@ export default {
     },
     showSlotPopup() {
       this.popupVisible2 = true;
+    },
+    showNoTitlePopup() {
+      this.popupVisible3 = true;
     }
   }
 };
