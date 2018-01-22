@@ -1,15 +1,16 @@
 # Guide
 
-* [Button](#button)
-* [Cell](#cell)
-* [Footer-tab & Tab-item](#footer-tab-tab-item)
-* [Toast](#toast)
-* [Back-top](#back-top)
-* [Modal](#modal)
-* [Popup](#popup)
-* [Loading](#loading)
-* [Switch](#switch)
-* [Radio](#radio)
+  - [Button](#button)
+  - [Cell](#cell)
+  - [Footer-tab & Tab-item](#footer-tab-tab-item)
+  - [Toast](#toast)
+  - [Back-top](#back-top)
+  - [Modal](#modal)
+  - [Popup](#popup)
+  - [Loading](#loading)
+  - [Switch](#switch)
+  - [Radio](#radio)
+  - [Input](#input)
 
 ## Button
 
@@ -195,9 +196,10 @@ toast.close();
 
 ### slot
 
-| name | 描述         |
-| ---- | ------------ |
-| -    | Popup 的内容 |
+| name   | 描述                |
+| ------ | ------------------- |
+| -      | Popup 的内容        |
+| header | Popup Header 的内容 |
 
 ### Events
 
