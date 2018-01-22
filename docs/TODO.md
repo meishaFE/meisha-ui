@@ -7,7 +7,9 @@
 * [x] popup
 * [ ] Dialog
 * [ ] Message Box
-* [ ] Input
+* [x] Input
+* [x] InputNumber
+* [x] Textarea
 * [x] Switch
 * [ ] Checkbox
 * [x] Radio
