@@ -11,6 +11,7 @@
   - [Switch](#switch)
   - [Radio](#radio)
   - [Input](#input)
+  - [Textarea](#textarea)
 
 ## Button
 
@@ -290,7 +291,7 @@ l.close();
 
 ## Input
 
-[examples](../examples/components/input.vue)
+[examples](../examples/components/textarea.vue)
 
 ### TODO
 
@@ -319,4 +320,36 @@ l.close();
 
 | 事件名称 | 说明                   | 回调参数 |
 | -------- | ---------------------- | -------- |
-| change   | Radio 绑定的值改变事件 | value    |
+| change   | Input 绑定的值改变事件 | value    |
+
+## Textarea
+
+[examples](../examples/components/input.vue)
+
+### TODO
+
+1. 表单校验
+
+### API
+
+| 参数        | 说明                 | 类型    | 可选值       | 默认值 |
+| ----------- | -------------------- | ------- | ------------ | ------ |
+| value       | 绑定值               | Boolean | -            | true   |
+| rows        | Textarea 的 rows     | Number  | -            | 4   |
+| disabled    | 是否禁用             | Boolean | -            | false  |
+| readonly    | 是否只读             | Boolean | -            | false  |
+| label       | Textarea 的 label       | String  | -            | -      |
+| placeholder | Textarea 的 placeholder | String  | -            | -      |
+| required    | Textarea 是否必填       | Boolean | -            | false  |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | Textarea Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
+| change   | Textarea 绑定的值改变事件 | value    |
