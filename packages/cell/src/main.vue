@@ -1,10 +1,7 @@
 <template>
     <div class="ms-cell">
         <div class="ms-cell__inner">
-            <div class="ms-cell__content"
-                 :class="{
-                   'is-icon': isLink || icon
-                 }">
+            <div class="ms-cell__content">
                 <slot>
                 </slot>
             </div>

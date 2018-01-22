@@ -21,6 +21,9 @@ import Collapse from '../packages/collapse/index.js';
 import Badge from '../packages/badge/index.js';
 import Carousel from '../packages/carousel/index.js';
 import Switch from '../packages/switch/index.js';
+import Textarea from '../packages/textarea/index.js';
+import RadioGroup from '../packages/radio-group/index.js';
+import InputNumber from '../packages/input-number/index.js';
 
 const components = [
   Button,
@@ -41,7 +44,10 @@ const components = [
   Collapse,
   Badge,
   Carousel,
-  Switch
+  Switch,
+  Textarea,
+  RadioGroup,
+  InputNumber
 ];
 
 const install = function(Vue, opts = {}) {
@@ -58,7 +64,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.8',
+  version: '0.0.10',
   install,
   Button,
   Cell,
@@ -80,7 +86,10 @@ module.exports = {
   Collapse,
   Badge,
   Carousel,
-  Switch
+  Switch,
+  Textarea,
+  RadioGroup,
+  InputNumber
 };
 
 module.exports.default = module.exports;

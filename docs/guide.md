@@ -1,15 +1,16 @@
 # Guide
 
-* [Button](#button)
-* [Cell](#cell)
-* [Footer-tab & Tab-item](#footer-tab-tab-item)
-* [Toast](#toast)
-* [Back-top](#back-top)
-* [Modal](#modal)
-* [Popup](#popup)
-* [Loading](#loading)
-* [Switch](#switch)
-* [Radio](#radio)
+  - [Button](#button)
+  - [Cell](#cell)
+  - [Footer-tab & Tab-item](#footer-tab-tab-item)
+  - [Toast](#toast)
+  - [Back-top](#back-top)
+  - [Modal](#modal)
+  - [Popup](#popup)
+  - [Loading](#loading)
+  - [Switch](#switch)
+  - [Radio](#radio)
+  - [Input](#input)
 
 ## Button
 
@@ -126,13 +127,13 @@ toast.close();
 
 ### options
 
-| 参数        | 说明                          | 类型   | 可选值                | 默认值 |
-| ----------- | ----------------------------- | ------ | --------------------- | ------ |
-| message     | Toast 显示的文本内容          | String | -                     | -      |
-| position    | Toast 显示的位置              | String | top / middle / bottom | middle |
+| 参数         | 说明                          | 类型   | 可选值                | 默认值 |
+| ------------ | ----------------------------- | ------ | --------------------- | ------ |
+| message      | Toast 显示的文本内容          | String | -                     | -      |
+| position     | Toast 显示的位置              | String | top / middle / bottom | middle |
 | custom-class | 自定义的 class                | String | -                     | -      |
 | icon-class   | icon 的 class                 | String | -                     | -      |
-| type        | 提示的类型，会显示对应的 icon | String | success / error       | -      |
+| type         | 提示的类型，会显示对应的 icon | String | success / error       | -      |
 
 ## Back-top
 
@@ -195,9 +196,10 @@ toast.close();
 
 ### slot
 
-| name | 描述         |
-| ---- | ------------ |
-| -    | Popup 的内容 |
+| name   | 描述                |
+| ------ | ------------------- |
+| -      | Popup 的内容        |
+| header | Popup Header 的内容 |
 
 ### Events
 
@@ -238,11 +240,11 @@ l.close();
 
 ### API
 
-| 参数          | 说明                  | 类型    | 可选值 | 默认值  |
-| ------------- | --------------------- | ------- | ------ | ------- |
-| value         | 绑定值                | Boolean | -      | true    |
-| width         | Switch 的宽度（像素） | Number  | -      | 48      |
-| disabled      | 是否禁用              | Boolean | -      | false   |
+| 参数           | 说明                  | 类型    | 可选值 | 默认值  |
+| -------------- | --------------------- | ------- | ------ | ------- |
+| value          | 绑定值                | Boolean | -      | true    |
+| width          | Switch 的宽度（像素） | Number  | -      | 48      |
+| disabled       | 是否禁用              | Boolean | -      | false   |
 | inactive-color | Switch 关闭时的背景色 | String  | -      | #dbdee4 |
 | active-color   | switch 打开时的背景色 | String  | -      | #00ca9d |
 
@@ -262,11 +264,6 @@ l.close();
 
 [examples](../examples/components/radio.vue)
 
-### TODO
-
-1. 按钮样式的 radio
-2. 边框样式的 radio
-
 ### API
 
 | 参数         | 说明                                 | 类型    | 可选值 | 默认值  |
@@ -274,8 +271,8 @@ l.close();
 | value        | 绑定值                               | Boolean | -      | true    |
 | size         | Radio 的大小（像素）                 | Number  | -      | 20      |
 | disabled     | 是否禁用                             | Boolean | -      | false   |
-| border-color  | Radio 的边框色                       | String  | -      | #eff2f7 |
-| active-color  | Radio 选中时的背景色                 | String  | -      | #00ca9d |
+| border-color | Radio 的边框色                       | String  | -      | #eff2f7 |
+| active-color | Radio 选中时的背景色                 | String  | -      | #00ca9d |
 | button       | Radio 显示为 button 样式             | Boolean | -      | false   |
 | button-round | Radio 显示为 button 样式时自定义圆角 | String  | -      | 4px     |
 
@@ -284,6 +281,39 @@ l.close();
 | name | 描述               |
 | ---- | ------------------ |
 | -    | Radio Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
+| change   | Radio 绑定的值改变事件 | value    |
+
+## Input
+
+[examples](../examples/components/input.vue)
+
+### TODO
+
+1. 表单校验
+
+### API
+
+| 参数        | 说明                 | 类型    | 可选值       | 默认值 |
+| ----------- | -------------------- | ------- | ------------ | ------ |
+| value       | 绑定值               | Boolean | -            | true   |
+| type        | Input 的原生属性     | String  | -            | text   |
+| disabled    | 是否禁用             | Boolean | -            | false  |
+| readonly    | 是否只读             | Boolean | -            | false  |
+| label       | Input 的 label       | String  | -            | -      |
+| placeholder | Input 的 placeholder | String  | -            | -      |
+| text-align  | Input 文字的对齐方式 | String  | left / right | right  |
+| required    | Input 是否必填       | Boolean | -            | false  |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | Input Label 的内容 |
 
 ### Events
 
