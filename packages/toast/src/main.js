@@ -2,6 +2,10 @@ import Vue from 'vue';
 import Main from './main.vue';
 
 const ToastCtor = Vue.extend(Main);
+const DEFAULT = {
+  DURATION: 1500,
+  POSITION: 'middle'
+};
 let pool = [];
 
 let getInstance = () => {
@@ -34,14 +38,14 @@ const Toast = (options = {}) => {
     };
   }
 
-  const duration = options.duration || 3000;
+  const duration = options.duration || DEFAULT.DURATION;
 
   const instance = getInstance();
   instance.closed = false;
   clearTimeout(instance.timer);
 
   instance.message = options.message;
-  instance.position = options.position || 'middle';
+  instance.position = options.position || DEFAULT.POSITION;
   instance.customClass = options.customClass || '';
   instance.iconClass = options.iconClass || '';
   instance.type = options.type || '';

@@ -19,5 +19,8 @@
   "collapse": "./packages/collapse/index.js",
   "badge": "./packages/badge/index.js",
   "carousel": "./packages/carousel/index.js",
-  "switch": "./packages/switch/index.js"
+  "switch": "./packages/switch/index.js",
+  "textarea": "./packages/textarea/index.js",
+  "radio-group": "./packages/radio-group/index.js",
+  "input-number": "./packages/input-number/index.js"
 }

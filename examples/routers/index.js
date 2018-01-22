@@ -49,6 +49,10 @@ export default new Router({
     {
       path: '/radio',
       component: () => import('../components/radio.vue')
+    },
+    {
+      path: '/input',
+      component: () => import('../components/input.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
