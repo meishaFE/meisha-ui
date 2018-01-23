@@ -61,6 +61,14 @@ export default new Router({
     {
       path: '/input-number',
       component: () => import('../components/input-number.vue')
+    },
+    {
+      path: '/selector',
+      component: () => import('../components/selector.vue')
+    },
+    {
+      path: '/range',
+      component: () => import('../components/range.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

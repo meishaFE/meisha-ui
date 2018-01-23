@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(selector) {
+  @include e(inner) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include font-dpr($--font-size-base);
+    color: $--color-text-regular;
+  }
+
+  @include e(label) {
+    font-size: inherit;
+    color: inherit;
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @include e(placeholder) {
+    font-size: inherit;
+    color: $--color-text-thirdly;
+  }
+
+  @include e(core) {
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: inherit;
+    color: $--color-text-secondary;
+  }
+}

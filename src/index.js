@@ -24,6 +24,7 @@ import Switch from '../packages/switch/index.js';
 import Textarea from '../packages/textarea/index.js';
 import RadioGroup from '../packages/radio-group/index.js';
 import InputNumber from '../packages/input-number/index.js';
+import Range from '../packages/range/index.js';
 
 const components = [
   Button,
@@ -47,7 +48,8 @@ const components = [
   Switch,
   Textarea,
   RadioGroup,
-  InputNumber
+  InputNumber,
+  Range
 ];
 
 const install = function(Vue, opts = {}) {
@@ -64,7 +66,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.12',
+  version: '0.0.13',
   install,
   Button,
   Cell,
@@ -89,7 +91,8 @@ module.exports = {
   Switch,
   Textarea,
   RadioGroup,
-  InputNumber
+  InputNumber,
+  Range
 };
 
 module.exports.default = module.exports;
