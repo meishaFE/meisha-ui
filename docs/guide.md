@@ -12,6 +12,7 @@
 * [Radio](#radio)
 * [Input](#input)
 * [Textarea](#textarea)
+* [Input-Number](#input-number)
 
 ## Button
 
@@ -376,3 +377,49 @@ l.close();
 | change   | 绑定值被改变时触发          | 最后变更的值   |
 | blur     | 组件的 Input 失去焦点时触发 | (event: Event) |
 | focus    | 组件的 Input 获得焦点时触发 | (event: Event) |
+
+## Selector
+
+这个组件暂时只是接收了 value，未添加 picker 组件，后续迭代
+
+### API
+
+| 参数        | 说明        | 类型    | 可选值 | 默认值 |
+| ----------- | ----------- | ------- | ------ | ------ |
+| value       | 绑定值      | Boolean | -      | true   |
+| multiple    | 是否多选    | Boolean | -      | false  |
+| disabled    | 是否禁用    | Boolean | -      | false  |
+| placeholder | placeholder | String  | -      | -      |
+| label       | label       | String  | -      | -      |
+
+### Events
+
+| 事件名称 | 说明     | 回调参数 |
+| -------- | -------- | -------- |
+| click    | 点击事件 | -        |
+
+## range
+
+### API
+
+| 参数      | 说明               | 类型    | 可选值 | 默认值 |
+| --------- | ------------------ | ------- | ------ | ------ |
+| value     | 滑块的值           | Number  |        |        |
+| min       | 最小值             | Number  |        | 0      |
+| max       | 最大值             | Number  |        | 100    |
+| step      | 步长               | Number  |        | 1      |
+| disabled  | 是否禁用           | Boolean |        | false  |
+| barHeight | 滑槽的线宽（像素） | Number  |        | 4      |
+
+### slot
+
+| name  | 描述               |
+| ----- | ------------------ |
+| start | 滑块左边显示的内容 |
+| end   | 滑块右边显示的内容 |
+
+### Events
+
+| 事件名称 | 说明             | 回调参数 |
+| -------- | ---------------- | -------- |
+| change   | 绑定的值改变事件 | value    |

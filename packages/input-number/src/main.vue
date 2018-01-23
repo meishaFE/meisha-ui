@@ -8,12 +8,12 @@
           ]">
             <span v-if="controls"
                   class="ms-input-number__button ms-input-number__decrease"
-                  :class="{'is-disabled': minDisabled}"
+                  :class="{'is-disabled': minDisabled || disabled}"
                   @click="decrease">—
             </span>
             <span v-if="controls"
                   class="ms-input-number__button ms-input-number__increase"
-                  :class="{'is-disabled': maxDisabled}"
+                  :class="{'is-disabled': maxDisabled || disabled}"
                   @click="increase">
                 <i class="ms-icon-plus"></i>
             </span>

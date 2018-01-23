@@ -22,5 +22,6 @@
   "switch": "./packages/switch/index.js",
   "textarea": "./packages/textarea/index.js",
   "radio-group": "./packages/radio-group/index.js",
-  "input-number": "./packages/input-number/index.js"
+  "input-number": "./packages/input-number/index.js",
+  "range": "./packages/range/index.js"
 }
