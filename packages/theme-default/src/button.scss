@@ -46,7 +46,7 @@
     padding: 0 20px;
 
     @include when(disabled) {
-      color: mix($--color-white, $--color-text-secondary, 50%);
+      color: mix($--color-white, $--color-text-secondary, 50%) !important;
     }
   }
 
