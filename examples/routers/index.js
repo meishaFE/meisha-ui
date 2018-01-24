@@ -69,6 +69,14 @@ export default new Router({
     {
       path: '/range',
       component: () => import('../components/range.vue')
+    },
+    {
+      path: '/message-box',
+      component: () => import('../components/message-box.vue')
+    },
+    {
+      path: '/swipe',
+      component: () => import('../components/swipe.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

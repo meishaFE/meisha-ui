@@ -25,6 +25,9 @@ import Textarea from '../packages/textarea/index.js';
 import RadioGroup from '../packages/radio-group/index.js';
 import InputNumber from '../packages/input-number/index.js';
 import Range from '../packages/range/index.js';
+import MessageBox from '../packages/message-box/index.js';
+import Swipe from '../packages/swipe/index.js';
+import SwipeItem from '../packages/swipe-item/index.js';
 
 const components = [
   Button,
@@ -49,7 +52,10 @@ const components = [
   Textarea,
   RadioGroup,
   InputNumber,
-  Range
+  Range,
+  MessageBox,
+  Swipe,
+  SwipeItem
 ];
 
 const install = function(Vue, opts = {}) {
@@ -92,7 +98,10 @@ module.exports = {
   Textarea,
   RadioGroup,
   InputNumber,
-  Range
+  Range,
+  MessageBox,
+  Swipe,
+  SwipeItem
 };
 
 module.exports.default = module.exports;

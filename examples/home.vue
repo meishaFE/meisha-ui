@@ -35,16 +35,22 @@
         </ms-cell>
         <ms-cell is-link>
             <router-link :to="{path: '/textarea'}">textarea</router-link>
-      </ms-cell>
-       <ms-cell is-link>
+        </ms-cell>
+        <ms-cell is-link>
             <router-link :to="{path: '/input-number'}">input-number</router-link>
-      </ms-cell>
-       <ms-cell is-link>
+        </ms-cell>
+        <ms-cell is-link>
             <router-link :to="{path: '/selector'}">selector</router-link>
-      </ms-cell>
-            <ms-cell is-link>
+        </ms-cell>
+        <ms-cell is-link>
             <router-link :to="{path: '/range'}">range</router-link>
-      </ms-cell>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/message-box'}">message-box</router-link>
+        </ms-cell>
+        <ms-cell is-link>
+            <router-link :to="{path: '/swipe'}">swipe</router-link>
+        </ms-cell>
     </div>
 </template>
 

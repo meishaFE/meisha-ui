@@ -12,7 +12,8 @@
 * [Radio](#radio)
 * [Input](#input)
 * [Textarea](#textarea)
-* [Input-Number](#input-number)
+* [Selector](#selector)
+* [MessageBox](#messagebox)
 
 ## Button
 
@@ -357,6 +358,8 @@ l.close();
 
 ## Input-Number
 
+[examples](../examples/components/input-number.vue)
+
 ### API
 
 | 参数     | 说明                   | 类型    | 可选值         | 默认值    |
@@ -380,6 +383,8 @@ l.close();
 
 ## Selector
 
+[examples](../examples/components/selector.vue)
+
 这个组件暂时只是接收了 value，未添加 picker 组件，后续迭代
 
 ### API
@@ -399,6 +404,8 @@ l.close();
 | click    | 点击事件 | -        |
 
 ## range
+
+[examples](../examples/components/range.vue)
 
 ### API
 
@@ -423,3 +430,38 @@ l.close();
 | 事件名称 | 说明             | 回调参数 |
 | -------- | ---------------- | -------- |
 | change   | 绑定的值改变事件 | value    |
+
+## MessageBox
+
+[examples](../examples/components/message-box.vue)
+
+### API
+
+| 参数                 | 说明                                   | 类型    | 可选值 | 默认值 |
+| -------------------- | -------------------------------------- | ------- | ------ | ------ |
+| visible              | 是否显示 MessageBox，支持 .sync 修饰符 | Boolean |        | false  |
+| title                | 显示的标题                             | String  | —      | -      |
+| message              | 显示的内容，可以传 html 片段           | String  | -      | -      |
+| show-confirm-button  | 是否显示确定按钮                       | Boolean | -      | true   |
+| show-cancel-button   | 是否显示取消按钮                       | Boolean | -      | false  |
+| confirm-button-text  | 确定按钮的显示文本                     | String  | -      | 确定   |
+| cancel-button-text   | 取消按钮的显示文本                     | String  | -      | 取消   |
+| confirm-button-class | 确定按钮自定义的 class                 | String  | -      | -      |
+| cancel-button-class  | 取消按钮自定义的 class                 | String  | -      | -      |
+| close-on-click-modal | 是否可以通过点击遮罩关闭弹窗           | Boolean | -      | false  |
+
+### slot
+
+| name   | 描述               |
+| ------ | ------------------ |
+| -      | 弹窗主体显示的内容 |
+| footer | 弹窗底部的内容     |
+
+### Events
+
+| 事件名称 | 说明               | 回调参数 |
+| -------- | ------------------ | -------- |
+| confirm  | 点击确定按钮的事件 | -        |
+| cancel   | 点击取消按钮的事件 | -        |
+| open     | 弹窗打开的事件     | -        |
+| close    | 弹窗关闭的事件     | -        |
