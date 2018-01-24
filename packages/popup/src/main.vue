@@ -105,6 +105,10 @@ export default {
     }
   },
 
+  destroyed() {
+    this.close();
+  },
+
   watch: {
     visible(val) {
       if (val) {

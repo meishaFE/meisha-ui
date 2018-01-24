@@ -64,8 +64,7 @@ export default {
     },
     radioButtonBorder() {
       return {
-        [this.button && this.buttonRound ? 'borderRadius' : '']: this.buttonRound,
-        [this.button && this.borderColor ? 'borderColor' : '']: this.borderColor
+        [this.button && this.buttonRound ? 'borderRadius' : '']: this.buttonRound
       };
     }
   }

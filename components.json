@@ -23,5 +23,8 @@
   "textarea": "./packages/textarea/index.js",
   "radio-group": "./packages/radio-group/index.js",
   "input-number": "./packages/input-number/index.js",
-  "range": "./packages/range/index.js"
+  "range": "./packages/range/index.js",
+  "message-box": "./packages/message-box/index.js",
+  "swipe": "./packages/swipe/index.js",
+  "swipe-item": "./packages/swipe-item/index.js"
 }
