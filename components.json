@@ -7,7 +7,6 @@
   "float-button": "./packages/float-button/index.js",
   "back-top": "./packages/back-top/index.js",
   "modal": "./packages/modal/index.js",
-  "dialog": "./packages/dialog/index.js",
   "popup": "./packages/popup/index.js",
   "loading": "./packages/loading/index.js",
   "radio": "./packages/radio/index.js",

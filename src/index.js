@@ -8,7 +8,6 @@ import Toast from '../packages/toast/index.js';
 import FloatButton from '../packages/float-button/index.js';
 import BackTop from '../packages/back-top/index.js';
 import Modal from '../packages/modal/index.js';
-import Dialog from '../packages/dialog/index.js';
 import Popup from '../packages/popup/index.js';
 import Loading from '../packages/loading/index.js';
 import Radio from '../packages/radio/index.js';
@@ -37,7 +36,6 @@ const components = [
   FloatButton,
   BackTop,
   Modal,
-  Dialog,
   Popup,
   Radio,
   Input,
@@ -82,7 +80,6 @@ module.exports = {
   FloatButton,
   BackTop,
   Modal,
-  Dialog,
   Popup,
   Loading,
   Radio,
