@@ -44,10 +44,6 @@
     display: inline-block;
     height: 50px;
     padding: 0 20px;
-
-    @include when(disabled) {
-      color: mix($--color-white, $--color-text-secondary, 50%) !important;
-    }
   }
 
   @include m(mini) {
@@ -62,6 +58,9 @@
 
     &:not(.is-disabled):active {
       background: mix($--color-black, $--button-background-color-default, 5%);
+    }
+    @include when(disabled) {
+      color: mix($--color-white, $--color-text-secondary, 50%) !important;
     }
 
     @include when(plain) {

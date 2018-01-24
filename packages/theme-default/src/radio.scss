@@ -6,6 +6,7 @@
 @include b(radio) {
   display: inline-flex;
   align-items: center;
+  color: $--color-text-secondary;
 
   @include e(input) {
     position: absolute;
@@ -53,17 +54,17 @@
 
     &.is-checked {
       color: #00ca9d;
-      border: 1px solid #00ca9d;
+      border-color: #00ca9d;
     }
 
     &.is-disabled {
-      border: 1px solid #dadfe6;
+      border-color: #dadfe6;
     }
   }
 
   @include e(label) {
     @include font-dpr($--font-size-small);
-    color: $--color-text-secondary;
+    color: inherit;
     margin-left: 10px;
 
     &:empty {
