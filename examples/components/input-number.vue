@@ -1,7 +1,8 @@
 <template>
     <div style="padding: 20px; background: #fff;">
         <div style="margin-bottom: 10px;">
-            <ms-input-number v-model="number"></ms-input-number>
+            <ms-input-number v-model="number"
+            @change="handleChange"></ms-input-number>
         </div>
         <div style="margin-bottom: 10px;">
             <ms-input-number disabled
@@ -35,6 +36,12 @@ export default {
       number1: 1,
       number2: 1
     };
+  },
+
+  methods: {
+    handleChange() {
+      console.log(arguments);
+    }
   }
 };
 </script>

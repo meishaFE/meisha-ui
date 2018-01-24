@@ -12,6 +12,7 @@
 * [Radio](#radio)
 * [Input](#input)
 * [Textarea](#textarea)
+* [Input-Number](#input-number)
 * [Selector](#selector)
 * [MessageBox](#messagebox)
 
@@ -375,11 +376,11 @@ l.close();
 
 ### Events
 
-| 事件名称 | 说明                        | 回调参数       |
-| -------- | --------------------------- | -------------- |
-| change   | 绑定值被改变时触发          | 最后变更的值   |
-| blur     | 组件的 Input 失去焦点时触发 | (event: Event) |
-| focus    | 组件的 Input 获得焦点时触发 | (event: Event) |
+| 事件名称 | 说明                        | 回调参数                              |
+| -------- | --------------------------- | ------------------------------------- |
+| change   | 绑定值被改变时触发          | newVal:最后变更的值, oldVal: 上一个值 |
+| blur     | 组件的 Input 失去焦点时触发 | (event: Event)                        |
+| focus    | 组件的 Input 获得焦点时触发 | (event: Event)                        |
 
 ## Selector
 
@@ -452,10 +453,10 @@ l.close();
 
 ### slot
 
-| name   | 描述               |
-| ------ | ------------------ |
-| -      | 弹窗主体显示的内容 |
-| footer | 弹窗底部的内容     |
+| name   | 描述                                          |
+| ------ | --------------------------------------------- |
+| -      | 弹窗主体显示的内容，和 message 显示的内容一样 |
+| footer | 弹窗底部的内容                                |
 
 ### Events
 
@@ -465,3 +466,33 @@ l.close();
 | cancel   | 点击取消按钮的事件 | -        |
 | open     | 弹窗打开的事件     | -        |
 | close    | 弹窗关闭的事件     | -        |
+
+## Swipe
+
+**需要重构**
+
+[examples](../examples/components/swipe.vue)
+
+### API
+
+| 参数            | 说明                                                                                           | 类型    | 可选值 | 默认值 |
+| --------------- | ---------------------------------------------------------------------------------------------- | ------- | ------ | ------ |
+| speed           | 过度动画持续时间（毫秒）                                                                       | Number  |        | 300    |
+| auto            | 自动播放的时间间隔（毫秒）                                                                     | Number  |        | 3000   |
+| defaultIndex    | 初始显示的轮播图的索引                                                                         | Number  |        | 0      |
+| loop            | 是否可以循环播放                                                                               | Boolean |        | true   |
+| showIndicators  | 是否显示下方的指示器                                                                           | Boolean |        | true   |
+| prevent         | 是否在 touchstart 事件触发时阻止事件的默认行为。设为 true 可提高运行在低版本安卓浏览器时的性能 | Boolean |        | false  |
+| stopPropagation | 是否在 touchstart 事件触发时阻止冒泡。                                                         | Boolean |        | false  |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | ms-swipe-item 组件 |
+
+### ms-swipe-tiem slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | 轮播图的内容 |

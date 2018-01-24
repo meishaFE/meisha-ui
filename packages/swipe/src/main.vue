@@ -44,6 +44,10 @@ export default {
     stopPropagation: {
       type: Boolean,
       default: false
+    },
+    prevent: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -58,8 +62,7 @@ export default {
       timer: null,
       reInitTimer: null,
       noDrag: false,
-      isDone: false,
-      prevent: false
+      isDone: false
     };
   },
 
