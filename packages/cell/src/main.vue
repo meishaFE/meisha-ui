@@ -1,11 +1,10 @@
 <template>
     <div class="ms-cell">
-        <div class="ms-cell__inner"
-             :class="{
-                 'is-link': isLink
-               }">
-            <slot>
-            </slot>
+        <div class="ms-cell__inner">
+            <div class="ms-cell__content">
+                <slot>
+                </slot>
+            </div>
             <i class="ms-cell__suffix"
                :class="[isLink && !icon ? 'ms-icon-arrow-right' : `ms-icon-${icon}`]"
                v-if="icon || isLink"

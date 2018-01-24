@@ -23,6 +23,21 @@
         <ms-radio v-model="value5"
                   disabled
                   label="1">禁用</ms-radio>
+        <h3>按钮状态</h3>
+        <ms-radio v-model="value6"
+                  :button="true"
+                  label="1">按钮状态</ms-radio>
+        <ms-radio v-model="value6"
+                  :button="true"
+                  label="2">按钮状态</ms-radio>
+        <ms-radio v-model="value6"
+                  button
+                  disabled
+                  label="3">按钮禁用</ms-radio>
+                  <ms-radio v-model="value6"
+                  button
+                  button-round="100px"
+                  label="4">按钮加圆角</ms-radio>
     </div>
 </template>
 <script>
@@ -35,7 +50,8 @@ export default {
       value2: '1',
       value3: '2',
       value4: '2',
-      value5: false
+      value5: false,
+      value6: '1'
     };
   }
 };

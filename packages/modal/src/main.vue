@@ -1,6 +1,7 @@
 <template>
     <div class="ms-modal"
          v-show="visible"
+         :style="{backgroundColor: color}"
          @click.prevent.stop="handleClick">
     </div>
 </template>
@@ -25,6 +26,10 @@ export default {
     closeOnClick: {
       type: Boolean,
       default: true
+    },
+    color: {
+      type: String,
+      default: 'rgba(0, 0, 0, 0.2)'
     }
   },
 
@@ -39,6 +44,10 @@ export default {
     if (this.visible) {
       this.open();
     }
+  },
+
+  destroyed() {
+    this.close();
   },
 
   methods: {
@@ -73,7 +82,7 @@ export default {
       if (val) {
         this.open();
       } else {
-        if (!this.closed) this.$emit('close');
+        if (!this.closed) this.close();
       }
     }
   }

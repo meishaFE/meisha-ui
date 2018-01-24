@@ -21,6 +21,13 @@ import Collapse from '../packages/collapse/index.js';
 import Badge from '../packages/badge/index.js';
 import Carousel from '../packages/carousel/index.js';
 import Switch from '../packages/switch/index.js';
+import Textarea from '../packages/textarea/index.js';
+import RadioGroup from '../packages/radio-group/index.js';
+import InputNumber from '../packages/input-number/index.js';
+import Range from '../packages/range/index.js';
+import MessageBox from '../packages/message-box/index.js';
+import Swipe from '../packages/swipe/index.js';
+import SwipeItem from '../packages/swipe-item/index.js';
 
 const components = [
   Button,
@@ -41,7 +48,14 @@ const components = [
   Collapse,
   Badge,
   Carousel,
-  Switch
+  Switch,
+  Textarea,
+  RadioGroup,
+  InputNumber,
+  Range,
+  MessageBox,
+  Swipe,
+  SwipeItem
 ];
 
 const install = function(Vue, opts = {}) {
@@ -58,7 +72,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.6',
+  version: '0.0.14',
   install,
   Button,
   Cell,
@@ -80,7 +94,14 @@ module.exports = {
   Collapse,
   Badge,
   Carousel,
-  Switch
+  Switch,
+  Textarea,
+  RadioGroup,
+  InputNumber,
+  Range,
+  MessageBox,
+  Swipe,
+  SwipeItem
 };
 
 module.exports.default = module.exports;

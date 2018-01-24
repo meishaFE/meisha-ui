@@ -1,13 +1,15 @@
 <template>
     <label class="ms-radio"
-           :class="{'is-checked': model === label, 'is-disabled': disabled}">
+           :class="{'is-checked': model === label, 'is-disabled': disabled, 'is-button': button}"
+           :style="[radioButtonBorder]">
         <input class="ms-radio__input"
                v-model="model"
                :disabled="disabled"
                :value="label"
                type="radio"
                @change="$emit('change', model)">
-        <span class="ms-radio__core"
+        <span v-if="!button"
+              class="ms-radio__core"
               :style="{width: size + 'px', height: size + 'px', borderColor: borderColor}"
               ref="core">
             <span class="ms-radio__dot"
@@ -20,7 +22,6 @@
 </template>
 
 <script>
-// TODO: 按钮和带边框样式的 radio
 export default {
   name: 'MsRadio',
 
@@ -42,6 +43,13 @@ export default {
     activeColor: {
       type: String,
       default: '#00ca9d'
+    },
+    button: {
+      type: Boolean,
+      default: false
+    },
+    buttonRound: {
+      type: String
     }
   },
 
@@ -53,6 +61,11 @@ export default {
       set(val) {
         this.$emit('input', val);
       }
+    },
+    radioButtonBorder() {
+      return {
+        [this.button && this.buttonRound ? 'borderRadius' : '']: this.buttonRound
+      };
     }
   }
 };

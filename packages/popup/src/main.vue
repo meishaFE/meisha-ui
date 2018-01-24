@@ -4,12 +4,15 @@
             <div class="ms-popup__inner"
                  :style="{height: height}"
                  v-show="visible">
-                <div class="ms-popup__header">
-                    <div class="ms-popup__title">{{ title }}</div>
-                    <div v-if="showClose">
-                        <i class="ms-popup__close ms-icon-close"
-                           @click.prevent.stop="handleClose"></i>
-                    </div>
+                <div class="ms-popup__header"
+                     v-show="title || $slots.header">
+                    <slot name="header">
+                        <div class="ms-popup__title">{{ title }}</div>
+                        <div v-if="showClose">
+                            <i class="ms-popup__close ms-icon-close"
+                               @click.prevent.stop="handleClose"></i>
+                        </div>
+                    </slot>
                 </div>
                 <div class="ms-popup__body">
                     <slot></slot>
@@ -61,6 +64,10 @@ export default {
     height: {
       type: String,
       default: '80%'
+    },
+    showHeader: {
+      type: Boolean,
+      default: true
     }
   },
 
@@ -96,6 +103,10 @@ export default {
     if (this.visible) {
       this.open();
     }
+  },
+
+  destroyed() {
+    this.close();
   },
 
   watch: {

@@ -5,12 +5,13 @@
 * [x] Footer-tab
 * [x] Modal
 * [x] popup
-* [ ] Dialog
-* [ ] Message Box
-* [ ] Input
+* [x] Message box
+* [x] Input
+* [x] InputNumber
+* [x] Textarea
 * [x] Switch
 * [ ] Checkbox
 * [x] Radio
 * [ ] Picker
 * [ ] Datetime Picker
-* [ ] Range
+* [x] Range

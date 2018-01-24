@@ -10,6 +10,11 @@
 * [Loading](#loading)
 * [Switch](#switch)
 * [Radio](#radio)
+* [Input](#input)
+* [Textarea](#textarea)
+* [Input-Number](#input-number)
+* [Selector](#selector)
+* [MessageBox](#messagebox)
 
 ## Button
 
@@ -126,13 +131,13 @@ toast.close();
 
 ### options
 
-| 参数        | 说明                          | 类型   | 可选值                | 默认值 |
-| ----------- | ----------------------------- | ------ | --------------------- | ------ |
-| message     | Toast 显示的文本内容          | String | -                     | -      |
-| position    | Toast 显示的位置              | String | top / middle / bottom | middle |
-| customClass | 自定义的 class                | String | -                     | -      |
-| iconClass   | icon 的 class                 | String | -                     | -      |
-| type        | 提示的类型，会显示对应的 icon | String | success / error       | -      |
+| 参数         | 说明                          | 类型   | 可选值                | 默认值 |
+| ------------ | ----------------------------- | ------ | --------------------- | ------ |
+| message      | Toast 显示的文本内容          | String | -                     | -      |
+| position     | Toast 显示的位置              | String | top / middle / bottom | middle |
+| custom-class | 自定义的 class                | String | -                     | -      |
+| icon-class   | icon 的 class                 | String | -                     | -      |
+| type         | 提示的类型，会显示对应的 icon | String | success / error       | -      |
 
 ## Back-top
 
@@ -195,9 +200,10 @@ toast.close();
 
 ### slot
 
-| name | 描述         |
-| ---- | ------------ |
-| -    | Popup 的内容 |
+| name   | 描述                |
+| ------ | ------------------- |
+| -      | Popup 的内容        |
+| header | Popup Header 的内容 |
 
 ### Events
 
@@ -238,13 +244,13 @@ l.close();
 
 ### API
 
-| 参数          | 说明                  | 类型    | 可选值 | 默认值  |
-| ------------- | --------------------- | ------- | ------ | ------- |
-| value         | 绑定值                | Boolean | -      | true    |
-| width         | Switch 的宽度（像素） | Number  | -      | 48      |
-| disabled      | 是否禁用              | Boolean | -      | false   |
-| inactiveColor | Switch 关闭时的背景色 | String  | -      | #dbdee4 |
-| activeColor   | switch 打开时的背景色 | String  | -      | #00ca9d |
+| 参数           | 说明                  | 类型    | 可选值 | 默认值  |
+| -------------- | --------------------- | ------- | ------ | ------- |
+| value          | 绑定值                | Boolean | -      | true    |
+| width          | Switch 的宽度（像素） | Number  | -      | 48      |
+| disabled       | 是否禁用              | Boolean | -      | false   |
+| inactive-color | Switch 关闭时的背景色 | String  | -      | #dbdee4 |
+| active-color   | switch 打开时的背景色 | String  | -      | #00ca9d |
 
 ### slot
 
@@ -262,20 +268,17 @@ l.close();
 
 [examples](../examples/components/radio.vue)
 
-### TODO
-
-1. 按钮样式的 radio
-2. 边框样式的 radio
-
 ### API
 
-| 参数        | 说明                 | 类型    | 可选值 | 默认值  |
-| ----------- | -------------------- | ------- | ------ | ------- |
-| value       | 绑定值               | Boolean | -      | true    |
-| size        | Radio 的大小（像素） | Number  | -      | 20      |
-| disabled    | 是否禁用             | Boolean | -      | false   |
-| borderColor | Radio 的边框色       | String  | -      | #eff2f7 |
-| activeColor | Radio 选中时的背景色 | String  | -      | #00ca9d |
+| 参数         | 说明                                 | 类型    | 可选值 | 默认值  |
+| ------------ | ------------------------------------ | ------- | ------ | ------- |
+| value        | 绑定值                               | Boolean | -      | true    |
+| size         | Radio 的大小（像素）                 | Number  | -      | 20      |
+| disabled     | 是否禁用                             | Boolean | -      | false   |
+| border-color | Radio 的边框色                       | String  | -      | #eff2f7 |
+| active-color | Radio 选中时的背景色                 | String  | -      | #00ca9d |
+| button       | Radio 显示为 button 样式             | Boolean | -      | false   |
+| button-round | Radio 显示为 button 样式时自定义圆角 | String  | -      | 4px     |
 
 ### slot
 
@@ -288,3 +291,208 @@ l.close();
 | 事件名称 | 说明                   | 回调参数 |
 | -------- | ---------------------- | -------- |
 | change   | Radio 绑定的值改变事件 | value    |
+
+## Input
+
+[examples](../examples/components/textarea.vue)
+
+### TODO
+
+1. 表单校验
+
+### API
+
+| 参数        | 说明                 | 类型    | 可选值       | 默认值 |
+| ----------- | -------------------- | ------- | ------------ | ------ |
+| value       | 绑定值               | Boolean | -            | true   |
+| type        | Input 的原生属性     | String  | -            | text   |
+| disabled    | 是否禁用             | Boolean | -            | false  |
+| readonly    | 是否只读             | Boolean | -            | false  |
+| label       | Input 的 label       | String  | -            | -      |
+| placeholder | Input 的 placeholder | String  | -            | -      |
+| text-align  | Input 文字的对齐方式 | String  | left / right | right  |
+| required    | Input 是否必填       | Boolean | -            | false  |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | Input Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                   | 回调参数 |
+| -------- | ---------------------- | -------- |
+| change   | Input 绑定的值改变事件 | value    |
+
+## Textarea
+
+[examples](../examples/components/input.vue)
+
+### TODO
+
+1. 表单校验
+
+### API
+
+| 参数        | 说明                    | 类型    | 可选值 | 默认值 |
+| ----------- | ----------------------- | ------- | ------ | ------ |
+| value       | 绑定值                  | Boolean | -      | true   |
+| rows        | Textarea 的 rows        | Number  | -      | 4      |
+| disabled    | 是否禁用                | Boolean | -      | false  |
+| readonly    | 是否只读                | Boolean | -      | false  |
+| label       | Textarea 的 label       | String  | -      | -      |
+| placeholder | Textarea 的 placeholder | String  | -      | -      |
+| required    | Textarea 是否必填       | Boolean | -      | false  |
+
+### slot
+
+| name | 描述                  |
+| ---- | --------------------- |
+| -    | Textarea Label 的内容 |
+
+### Events
+
+| 事件名称 | 说明                      | 回调参数 |
+| -------- | ------------------------- | -------- |
+| change   | Textarea 绑定的值改变事件 | value    |
+
+## Input-Number
+
+[examples](../examples/components/input-number.vue)
+
+### API
+
+| 参数     | 说明                   | 类型    | 可选值         | 默认值    |
+| -------- | ---------------------- | ------- | -------------- | --------- |
+| value    | 绑定值                 | Boolean | -              | true      |
+| step     | 计数器步长             | Number  | -              | 1         |
+| min      | 计数器允许的最小值     | Number  | -              | -Infinity |
+| max      | 计数器允许的最大值     | Number  | -              | Infinity  |
+| size     | 计数器尺寸             | String  | normal / small | normal    |
+| disabled | 是否禁用               | Boolean | -              | false     |
+| controls | 是否使用控制按钮       | Boolean | -              | false     |
+| debounce | 输入时的去抖延迟，毫秒 | Number  | -              | 300       |
+
+### Events
+
+| 事件名称 | 说明                        | 回调参数                              |
+| -------- | --------------------------- | ------------------------------------- |
+| change   | 绑定值被改变时触发          | newVal:最后变更的值, oldVal: 上一个值 |
+| blur     | 组件的 Input 失去焦点时触发 | (event: Event)                        |
+| focus    | 组件的 Input 获得焦点时触发 | (event: Event)                        |
+
+## Selector
+
+[examples](../examples/components/selector.vue)
+
+这个组件暂时只是接收了 value，未添加 picker 组件，后续迭代
+
+### API
+
+| 参数        | 说明        | 类型    | 可选值 | 默认值 |
+| ----------- | ----------- | ------- | ------ | ------ |
+| value       | 绑定值      | Boolean | -      | true   |
+| multiple    | 是否多选    | Boolean | -      | false  |
+| disabled    | 是否禁用    | Boolean | -      | false  |
+| placeholder | placeholder | String  | -      | -      |
+| label       | label       | String  | -      | -      |
+
+### Events
+
+| 事件名称 | 说明     | 回调参数 |
+| -------- | -------- | -------- |
+| click    | 点击事件 | -        |
+
+## range
+
+[examples](../examples/components/range.vue)
+
+### API
+
+| 参数      | 说明               | 类型    | 可选值 | 默认值 |
+| --------- | ------------------ | ------- | ------ | ------ |
+| value     | 滑块的值           | Number  |        |        |
+| min       | 最小值             | Number  |        | 0      |
+| max       | 最大值             | Number  |        | 100    |
+| step      | 步长               | Number  |        | 1      |
+| disabled  | 是否禁用           | Boolean |        | false  |
+| barHeight | 滑槽的线宽（像素） | Number  |        | 4      |
+
+### slot
+
+| name  | 描述               |
+| ----- | ------------------ |
+| start | 滑块左边显示的内容 |
+| end   | 滑块右边显示的内容 |
+
+### Events
+
+| 事件名称 | 说明             | 回调参数 |
+| -------- | ---------------- | -------- |
+| change   | 绑定的值改变事件 | value    |
+
+## MessageBox
+
+[examples](../examples/components/message-box.vue)
+
+### API
+
+| 参数                 | 说明                                   | 类型    | 可选值 | 默认值 |
+| -------------------- | -------------------------------------- | ------- | ------ | ------ |
+| visible              | 是否显示 MessageBox，支持 .sync 修饰符 | Boolean |        | false  |
+| title                | 显示的标题                             | String  | —      | -      |
+| message              | 显示的内容，可以传 html 片段           | String  | -      | -      |
+| show-confirm-button  | 是否显示确定按钮                       | Boolean | -      | true   |
+| show-cancel-button   | 是否显示取消按钮                       | Boolean | -      | false  |
+| confirm-button-text  | 确定按钮的显示文本                     | String  | -      | 确定   |
+| cancel-button-text   | 取消按钮的显示文本                     | String  | -      | 取消   |
+| confirm-button-class | 确定按钮自定义的 class                 | String  | -      | -      |
+| cancel-button-class  | 取消按钮自定义的 class                 | String  | -      | -      |
+| close-on-click-modal | 是否可以通过点击遮罩关闭弹窗           | Boolean | -      | false  |
+
+### slot
+
+| name   | 描述                                          |
+| ------ | --------------------------------------------- |
+| -      | 弹窗主体显示的内容，和 message 显示的内容一样 |
+| footer | 弹窗底部的内容                                |
+
+### Events
+
+| 事件名称 | 说明               | 回调参数 |
+| -------- | ------------------ | -------- |
+| confirm  | 点击确定按钮的事件 | -        |
+| cancel   | 点击取消按钮的事件 | -        |
+| open     | 弹窗打开的事件     | -        |
+| close    | 弹窗关闭的事件     | -        |
+
+## Swipe
+
+**需要重构**
+
+[examples](../examples/components/swipe.vue)
+
+### API
+
+| 参数            | 说明                                                                                           | 类型    | 可选值 | 默认值 |
+| --------------- | ---------------------------------------------------------------------------------------------- | ------- | ------ | ------ |
+| speed           | 过度动画持续时间（毫秒）                                                                       | Number  |        | 300    |
+| auto            | 自动播放的时间间隔（毫秒）                                                                     | Number  |        | 3000   |
+| defaultIndex    | 初始显示的轮播图的索引                                                                         | Number  |        | 0      |
+| loop            | 是否可以循环播放                                                                               | Boolean |        | true   |
+| showIndicators  | 是否显示下方的指示器                                                                           | Boolean |        | true   |
+| prevent         | 是否在 touchstart 事件触发时阻止事件的默认行为。设为 true 可提高运行在低版本安卓浏览器时的性能 | Boolean |        | false  |
+| stopPropagation | 是否在 touchstart 事件触发时阻止冒泡。                                                         | Boolean |        | false  |
+
+### slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | ms-swipe-item 组件 |
+
+### ms-swipe-tiem slot
+
+| name | 描述               |
+| ---- | ------------------ |
+| -    | 轮播图的内容 |

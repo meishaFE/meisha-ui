@@ -81,6 +81,7 @@
     width: 100%;
     border-bottom: 1px solid #eaeaea;
     position: relative;
+    overflow: hidden;
   }
   @include e(title) {
     @include font-dpr(16px);
@@ -98,6 +99,7 @@
     transform: translateY(-50%);
   }
   @include e(body) {
+    height: calc(100% - 60px);
     overflow: scroll;
   }
 }

@@ -48,13 +48,13 @@
   }
 
   @include e(circular) {
-    animation: circularxAxis 1s infinite linear;
+    animation: circularxAxis 2.4s infinite linear;
     width: 34px;
     height: 34px;
 
     background: transparent;
     &::after {
-      animation: circularyAxis 1s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation: circularyAxis 2.4s infinite backwards cubic-bezier(0.215, 0.61, 0.355, 1);
       content: ' ';
       display: block;
       width: 34px;
@@ -70,9 +70,10 @@
     height: 30px;
 
     background: transparent;
-    animation: squarexAxis 1s infinite linear;
+    animation: squarexAxis 2.4s infinite linear;
+
     &::after {
-      animation: squareyAxis 1s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation: squareyAxis 2.4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
       content: ' ';
       display: block;
       width: 30px;
@@ -84,11 +85,13 @@
   }
 
   @include e(triangle) {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 12px 24px 12px;
-    border-color: transparent transparent #ffd42a transparent;
+    animation-delay: 0.3s;
+    animation: trianglexAxis 2.4s infinite linear;
+    text-align: center;
+    &__img {
+      animation-delay: 0.3s;
+      animation: triangleyAxis 2.4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
   }
 
   @include e(text) {
@@ -125,56 +128,204 @@
 }
 
 @keyframes circularxAxis {
-  100% {
-    animation-timing-function: linear;
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  // 先走圆的轨迹 2
+  32% {
     transform: translateX(-15px);
+  }
+  // 回到原点
+  33% {
+    transform: translateX(0);
+  }
+  // 走三角形的轨迹 3
+  65% {
+    transform: translateX(-50px);
+  }
+  // 回到原点
+  66% {
+    transform: translateX(0) rotate(0);
+  }
+  // 走正方形的轨迹 1
+  100% {
+    transform: rotate(40deg);
   }
 }
 
 @keyframes circularyAxis {
-  30% {
+  // 恢复透明度
+  16%,
+  34%,
+  49%,
+  67%,
+  83% {
     opacity: 1;
   }
+  // 先走圆的轨迹 2
+  32% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -90px, 0);
+  }
+  // 回到原点
+  33% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  // 走三角形的轨迹 3
+  65% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -55px, 0);
+  }
+  // 回到原点
+  66% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+
+  // 走正方形的轨迹 1
   100% {
-    opacity: 0.2;
+    opacity: 0;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, -90px, 0);
   }
 }
 
 @keyframes squarexAxis {
-  100% {
-    animation-timing-function: linear;
-    transform: translateX(50px);
+  0% {
+    transform: translateX(0) rotate(0);
   }
-}
-
-@keyframes squareyAxis {
-  30% {
-    opacity: 1;
+  // 先走正方形的轨迹 1
+  32% {
+    transform: rotate(40deg);
   }
-  100% {
-    opacity: 0.2;
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0, -70px, 0);
+  // 回到原点
+  33% {
+    transform: translateX(0) rotate(0);
   }
-}
-
-@keyframes trianglexAxis {
+  // 走圆的轨迹 2
+  65% {
+    transform: translateX(-15px);
+  }
+  // 回到原点
+  66% {
+    transform: translateX(0) rotate(0);
+  }
+  // 走三角形的轨迹 3
   100% {
-    animation-timing-function: linear;
     transform: translateX(-50px);
   }
 }
 
-@keyframes triangleyAxis {
-  30% {
+@keyframes squareyAxis {
+  // 恢复透明度
+  16%,
+  34%,
+  49%,
+  67%,
+  83% {
     opacity: 1;
   }
+  0% {
+    transform: translate3d(0) rotate(0);
+  }
+  // 先走正方形的轨迹 1
+  32% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -70px, 0);
+  }
+  // 回到原点
+  33% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  // 走圆的轨迹 2
+  65% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -90px, 0);
+  }
+  // 回到原点
+  66% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  // 走三角形的轨迹 3
   100% {
-    opacity: 0.2;
+    opacity: 0;
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, -55px, 0);
+  }
+}
+
+@keyframes trianglexAxis {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  // 走三角形的轨迹 3
+  32% {
+    transform: translateX(-50px);
+  }
+  // 回到原点
+  33% {
+    transform: translateX(0) rotate(0);
+  }
+  // 走正方形的轨迹 1
+  65% {
+    transform: rotate(40deg);
+  }
+  // 回到原点
+  66% {
+    transform: translateX(0) rotate(0);
+  }
+  // 走圆形的轨迹 2
+  100% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes triangleyAxis {
+  // 恢复透明度
+  16%,
+  34%,
+  49%,
+  67%,
+  83% {
+    opacity: 1;
+  }
+  0% {
+    transform: translate3d(0) rotate(0);
+  }
+  // 走三角形的轨迹 3
+  32% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -55px, 0);
+  }
+  // 回到原点
+  33% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  // 走正方形的轨迹 1
+  65% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -70px, 0);
+  }
+  // 回到原点
+  66% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  // 走圆形的轨迹 2
+  100% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, -90px, 0);
   }
 }
 

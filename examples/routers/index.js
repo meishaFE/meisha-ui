@@ -49,6 +49,34 @@ export default new Router({
     {
       path: '/radio',
       component: () => import('../components/radio.vue')
+    },
+    {
+      path: '/input',
+      component: () => import('../components/input.vue')
+    },
+    {
+      path: '/textarea',
+      component: () => import('../components/textarea.vue')
+    },
+    {
+      path: '/input-number',
+      component: () => import('../components/input-number.vue')
+    },
+    {
+      path: '/selector',
+      component: () => import('../components/selector.vue')
+    },
+    {
+      path: '/range',
+      component: () => import('../components/range.vue')
+    },
+    {
+      path: '/message-box',
+      component: () => import('../components/message-box.vue')
+    },
+    {
+      path: '/swipe',
+      component: () => import('../components/swipe.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
