@@ -77,6 +77,10 @@ export default new Router({
     {
       path: '/swipe',
       component: () => import('../components/swipe.vue')
+    },
+    {
+      path: '/check-box',
+      component: () => import('../components/checkbox.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {

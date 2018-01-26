@@ -25,5 +25,6 @@
   "range": "./packages/range/index.js",
   "message-box": "./packages/message-box/index.js",
   "swipe": "./packages/swipe/index.js",
-  "swipe-item": "./packages/swipe-item/index.js"
+  "swipe-item": "./packages/swipe-item/index.js",
+  "checkbox-group": "./packages/checkbox-group/index.js"
 }

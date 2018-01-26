@@ -496,3 +496,8 @@ l.close();
 | name | 描述               |
 | ---- | ------------------ |
 | -    | 轮播图的内容 |
+
+
+## Checkbox-group
+
+[examples](../examples/components/checkbox.vue)

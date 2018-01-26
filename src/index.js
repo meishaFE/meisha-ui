@@ -27,6 +27,7 @@ import Range from '../packages/range/index.js';
 import MessageBox from '../packages/message-box/index.js';
 import Swipe from '../packages/swipe/index.js';
 import SwipeItem from '../packages/swipe-item/index.js';
+import CheckboxGroup from '../packages/checkbox-group/index.js';
 
 const components = [
   Button,
@@ -53,7 +54,8 @@ const components = [
   Range,
   MessageBox,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  CheckboxGroup
 ];
 
 const install = function(Vue, opts = {}) {
@@ -98,7 +100,8 @@ module.exports = {
   Range,
   MessageBox,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  CheckboxGroup
 };
 
 module.exports.default = module.exports;
