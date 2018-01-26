@@ -8,7 +8,6 @@ import Toast from '../packages/toast/index.js';
 import FloatButton from '../packages/float-button/index.js';
 import BackTop from '../packages/back-top/index.js';
 import Modal from '../packages/modal/index.js';
-import Dialog from '../packages/dialog/index.js';
 import Popup from '../packages/popup/index.js';
 import Loading from '../packages/loading/index.js';
 import Radio from '../packages/radio/index.js';
@@ -28,6 +27,7 @@ import Range from '../packages/range/index.js';
 import MessageBox from '../packages/message-box/index.js';
 import Swipe from '../packages/swipe/index.js';
 import SwipeItem from '../packages/swipe-item/index.js';
+import CheckboxGroup from '../packages/checkbox-group/index.js';
 
 const components = [
   Button,
@@ -37,7 +37,6 @@ const components = [
   FloatButton,
   BackTop,
   Modal,
-  Dialog,
   Popup,
   Radio,
   Input,
@@ -55,7 +54,8 @@ const components = [
   Range,
   MessageBox,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  CheckboxGroup
 ];
 
 const install = function(Vue, opts = {}) {
@@ -72,7 +72,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.14',
+  version: '0.0.15',
   install,
   Button,
   Cell,
@@ -82,7 +82,6 @@ module.exports = {
   FloatButton,
   BackTop,
   Modal,
-  Dialog,
   Popup,
   Loading,
   Radio,
@@ -101,7 +100,8 @@ module.exports = {
   Range,
   MessageBox,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  CheckboxGroup
 };
 
 module.exports.default = module.exports;

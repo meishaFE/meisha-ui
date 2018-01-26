@@ -51,6 +51,9 @@
         <ms-cell is-link>
             <router-link :to="{path: '/swipe'}">swipe</router-link>
         </ms-cell>
+           <ms-cell is-link>
+            <router-link :to="{path: '/check-box'}">check-box</router-link>
+        </ms-cell>
     </div>
 </template>
 

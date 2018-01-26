@@ -1,4 +1,4 @@
-import MsCheckbox from './src/main.vue';
+import MsCheckbox from '../checkbox-group/src/checkbox.vue';
 
 MsCheckbox.install = function(Vue) {
   Vue.component(MsCheckbox.name, MsCheckbox);
