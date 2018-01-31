@@ -64,6 +64,7 @@ export default {
   methods: {
     handleInput(evt) {
       this.currentValue = evt.target.value;
+      this.$emit('input', this.currentValue);
     },
     handleClear() {
       if (this.disabled || this.readonly) return;

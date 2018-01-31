@@ -73,8 +73,10 @@
     right: 0;
     background: $--color-white;
     z-index: 1000;
+    backface-visibility: hidden;
     overflow: hidden;
   }
+
   @include e(header) {
     height: 60px;
     line-height: 60px;
@@ -97,9 +99,5 @@
     right: 15px;
     @include font-dpr(14px);
     transform: translateY(-50%);
-  }
-  @include e(body) {
-    height: calc(100% - 60px);
-    overflow: scroll;
   }
 }
