@@ -12,7 +12,6 @@
 [class^='ms-icon-'],
 [class*=' ms-icon-'] {
   font-family: 'meisha-icons' !important;
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -55,5 +54,12 @@
   content: '\e6fc';
 }
 
+.ms-icon-checkbox-normal:before {
+  content: '\e704';
+}
+
+.ms-icon-checkbox-active:before {
+  content: '\e705';
+}
 
 // TODO: 添加其他按钮

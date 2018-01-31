@@ -2,7 +2,7 @@
     <div class="ms-tab-item"
          @click="handleTabItemClick"
          :class="{ 'is-activated': $parent.value === value }">
-        <div class="ms-tab-item__icon">
+        <div v-if="$slots.icon" class="ms-tab-item__icon">
             <slot name="icon"></slot>
         </div>
         <div class="ms-tab-item__label">

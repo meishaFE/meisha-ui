@@ -14,7 +14,7 @@
                         </div>
                     </slot>
                 </div>
-                <div class="ms-popup__body">
+                <div class="ms-popup__body" @touchstart.stop @touchmove.stop @click.stop>
                     <slot></slot>
                 </div>
             </div>
