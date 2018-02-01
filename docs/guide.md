@@ -197,6 +197,7 @@ toast.close();
 | custom-class         | 自定义的类名                      | String  | -      | -      |
 | show-close           | 是否显示关闭按钮                  | Boolean | -      | true   |
 | height               | Popup 的高度                      | String  | -      | 80%    |
+| body-custom-class    | body 的自定义类名                 | String  | -      | -      |
 
 ### slot
 

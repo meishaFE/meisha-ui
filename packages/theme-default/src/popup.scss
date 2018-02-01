@@ -100,7 +100,4 @@
     @include font-dpr(14px);
     transform: translateY(-50%);
   }
-  @include e(body) {
-    position: relative;
-  }
 }

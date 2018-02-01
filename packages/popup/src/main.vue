@@ -14,7 +14,11 @@
                         </div>
                     </slot>
                 </div>
-                <div class="ms-popup__body" @touchstart.stop @touchmove.stop @click.stop>
+                <div class="ms-popup__body"
+                     :class="[bodyCustomClass]"
+                     @touchstart.stop
+                     @touchmove.stop
+                     @click.stop>
                     <slot></slot>
                 </div>
             </div>
@@ -40,6 +44,9 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    },
+    bodyCustomClass: {
+      type: String
     },
     closeOnClickModal: {
       type: Boolean,
