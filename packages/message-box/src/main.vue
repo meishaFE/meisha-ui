@@ -21,7 +21,8 @@
                                ref="input">
                     </div>
                 </div>
-                <div class="ms-message-box__footer"
+                <div v-if="showFooter"
+                     class="ms-message-box__footer"
                      :class="{'is-default': !$slots.footer}">
                     <slot name="footer">
                         <button class="ms-message-box__button ms-message-box__cancel is-border-right"
@@ -39,7 +40,7 @@
         <transition name="ms-msbox-modal-fade">
             <ms-modal class="ms-popup__modal"
                       :visible.sync="modalVisible"
-                      color="transparent"
+                      :color="modalColor"
                       :close-on-click="closeOnClickModal"
                       @close="handleModalClick" />
         </transition>
@@ -60,6 +61,10 @@ export default {
     },
     title: String,
     message: String,
+    showFooter: {
+      type: Boolean,
+      default: true
+    },
     showConfirmButton: {
       type: Boolean,
       default: true
@@ -78,6 +83,10 @@ export default {
     },
     confirmButtonClass: String,
     cancelButtonClass: String,
+    modalColor: {
+      type: String,
+      default: 'transparent'
+    },
     closeOnClickModal: {
       type: Boolean,
       default: false
