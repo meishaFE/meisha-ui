@@ -30,6 +30,7 @@
   }
 
   @include e(input) {
+    appearance: none;
     position: absolute;
     width: 0;
     height: 0;

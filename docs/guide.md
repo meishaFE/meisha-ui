@@ -197,6 +197,7 @@ toast.close();
 | custom-class         | 自定义的类名                      | String  | -      | -      |
 | show-close           | 是否显示关闭按钮                  | Boolean | -      | true   |
 | height               | Popup 的高度                      | String  | -      | 80%    |
+| body-custom-class    | body 的自定义类名                 | String  | -      | -      |
 
 ### slot
 
@@ -438,18 +439,20 @@ l.close();
 
 ### API
 
-| 参数                 | 说明                                   | 类型    | 可选值 | 默认值 |
-| -------------------- | -------------------------------------- | ------- | ------ | ------ |
-| visible              | 是否显示 MessageBox，支持 .sync 修饰符 | Boolean |        | false  |
-| title                | 显示的标题                             | String  | —      | -      |
-| message              | 显示的内容，可以传 html 片段           | String  | -      | -      |
-| show-confirm-button  | 是否显示确定按钮                       | Boolean | -      | true   |
-| show-cancel-button   | 是否显示取消按钮                       | Boolean | -      | false  |
-| confirm-button-text  | 确定按钮的显示文本                     | String  | -      | 确定   |
-| cancel-button-text   | 取消按钮的显示文本                     | String  | -      | 取消   |
-| confirm-button-class | 确定按钮自定义的 class                 | String  | -      | -      |
-| cancel-button-class  | 取消按钮自定义的 class                 | String  | -      | -      |
-| close-on-click-modal | 是否可以通过点击遮罩关闭弹窗           | Boolean | -      | false  |
+| 参数                 | 说明                                   | 类型    | 可选值 | 默认值      |
+| -------------------- | -------------------------------------- | ------- | ------ | ----------- |
+| visible              | 是否显示 MessageBox，支持 .sync 修饰符 | Boolean |        | false       |
+| title                | 显示的标题                             | String  | —      | -           |
+| message              | 显示的内容，可以传 html 片段           | String  | -      | -           |
+| show-confirm-button  | 是否显示确定按钮                       | Boolean | -      | true        |
+| show-cancel-button   | 是否显示取消按钮                       | Boolean | -      | false       |
+| show-footer          | 是否显示底部                           | Boolean | -      | true        |
+| confirm-button-text  | 确定按钮的显示文本                     | String  | -      | 确定        |
+| cancel-button-text   | 取消按钮的显示文本                     | String  | -      | 取消        |
+| confirm-button-class | 确定按钮自定义的 class                 | String  | -      | -           |
+| cancel-button-class  | 取消按钮自定义的 class                 | String  | -      | -           |
+| modal-color          | 遮罩层的颜色                           | String  | -      | transparent |
+| close-on-click-modal | 是否可以通过点击遮罩关闭弹窗           | Boolean | -      | false       |
 
 ### slot
 
@@ -493,10 +496,9 @@ l.close();
 
 ### ms-swipe-tiem slot
 
-| name | 描述               |
-| ---- | ------------------ |
+| name | 描述         |
+| ---- | ------------ |
 | -    | 轮播图的内容 |
-
 
 ## Checkbox-group
 
