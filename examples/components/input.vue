@@ -12,8 +12,13 @@ export default {
 
   data() {
     return {
-      value: ''
+      value: 'asdfasfasfasf'
     };
+  },
+  created() {
+    setTimeout(() => {
+      this.value = 'lemon';
+    }, 1000);
   }
 };
 </script>

@@ -6,7 +6,7 @@
       :style="buttonRadius">
         <span class="ms-checkbox__check"></span>
         <!-- <input type="checkbox"> -->
-        <input class="el-checkbox__input"
+        <input class="ms-checkbox__input"
                type="checkbox"
                :disabled="isDisabled"
                :value="label"
