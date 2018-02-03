@@ -69,6 +69,10 @@ export default {
     handleClear() {
       if (this.disabled || this.readonly) return;
       this.currentValue = '';
+    },
+    setCurrentValue(newVal) {
+      if (this.currentValue === newVal) return;
+      this.currentValue = newVal;
     }
   },
 
@@ -77,6 +81,12 @@ export default {
       return {
         [this.textAlign ? 'textAlign' : '']: this.textAlign
       };
+    }
+  },
+
+  watch: {
+    value(val) {
+      this.setCurrentValue(val);
     }
   }
 };
