@@ -14,7 +14,10 @@
 * [Textarea](#textarea)
 * [Input-Number](#input-number)
 * [Selector](#selector)
+* [range](#range)
 * [MessageBox](#messagebox)
+* [Swipe](#swipe)
+* [Checkbox-group](#checkbox-group)
 
 ## Button
 
@@ -503,3 +506,23 @@ l.close();
 ## Checkbox-group
 
 [examples](../examples/components/checkbox.vue)
+
+### API
+
+| 参数     | 说明                                          | 类型    | 可选值 | 默认值 |
+| -------- | --------------------------------------------- | ------- | ------ | ------ |
+| value    | Checkbox-Group 的绑定值                       | Boolean | -      | true   |
+| disabled | 是否禁用                                      | Boolean | -      | false  |
+| button   | Checkbox-Group 显示为 button 样式             | Boolean | -      | false  |
+| round    | Checkbox-Group 显示为 button 样式时自定义圆角 | String  | -      | 4px    |
+| max      | Checkbox-Group 最多的选择数目                 | Number  | -      | -      |
+
+### Checkbox API
+
+| 参数     | 说明                                                                                        | 类型    | 可选值 | 默认值 |
+| -------- | ------------------------------------------------------------------------------------------- | ------- | ------ | ------ |
+| value    | 绑定值                                                                                      | Boolean | -      | true   |
+| disabled | 是否禁用，在 Checkbox-Group 中会优先遵循 Checkbox-Group 的值                                | Boolean | -      | false  |
+| button   | Checkbox 显示为 button 样式，在 Checkbox-Group 中会优先遵循 Checkbox-Group 的值             | Boolean | -      | false  |
+| round    | Checkbox 显示为 button 样式时自定义圆角，在 Checkbox-Group 中会优先遵循 Checkbox-Group 的值 | String  | -      | 4px    |
+| checked  | Checkbox 是否已经选择                                                                       | Boolean | -      | false  |
