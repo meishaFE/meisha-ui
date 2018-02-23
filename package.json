@@ -125,6 +125,7 @@
     "vue-style-loader": "^3.0.3",
     "vue-template-compiler": "^2.5.13",
     "vue-template-es2015-compiler": "^1.6.0",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.3",
     "webpack-hot-middleware": "^2.21.0",
