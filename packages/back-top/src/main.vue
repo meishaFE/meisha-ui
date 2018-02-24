@@ -15,6 +15,16 @@
 </template>
 
 <script>
+/**
+ * @description 返回顶部的悬浮按钮
+ * @param {number} [showHeight=500] - 按钮显示的滚动距离
+ * @param {string} [icon=arrow-top] - 按钮内部的 icon
+ * @param {string} [customClass] - 自定义类名
+ * @param {slot} - 显示文本
+ *
+ * @example
+ * <ms-back-top>back-top</ms-back-top>
+ */
 import scrollToTop from './scroll-to-top';
 export default {
   name: 'MsBackTop',
