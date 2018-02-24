@@ -19,19 +19,18 @@
 </template>
 
 <script>
-// TODO: 暂未添加 loading （无设计稿），icon 插槽（暂无需求）
-// TODO: 单元测试
+// TODO: 暂未添加 loading （暂无需求），icon 插槽（暂无需求）
 /**
  * @description 按钮
- * @param {String} [type=default] - 显示类型，接受 default, warning, danger, primary
+ * @param {string} [type=default] - 显示类型，接受 default, warning, danger, primary
  * @param {string} [size=normal] - 尺寸，接受 normal, small, mini
+ * @param {string} [round=false] - 按钮的圆角
  * @param {boolean} [disabled=false] - 禁用
  * @param {boolean} [plain=false] - 幽灵按钮
- * @param {string} [native-type] - 原生 type 属性
  * @param {slot} - 显示文本
  *
  * @example
- * <ms-button size="large" type="warning">这是按钮</ms-button>
+ * <ms-button size="large" type="warning">button</ms-button>
  */
 export default {
   name: 'MsButton',
@@ -50,10 +49,6 @@ export default {
       validator(value) {
         return !!~['mini', 'small', 'normal'].indexOf(value);
       }
-    },
-    nativeType: {
-      type: String,
-      default: 'button'
     },
     disabled: Boolean,
     plain: Boolean,
