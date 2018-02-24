@@ -1,22 +1,12 @@
-import { shallow } from 'vue-test-utils'
-import Vue from 'vue'
-import MsButton from 'packages/button/index'
+import { createFactory } from '../utils'
+import MsButton from '@/button/src/main.vue'
 
-const createB = (propsData = {}, otherOpts = {}) =>
-  shallow(MsButton, {
-    propsData,
-    ...otherOpts
-  })
+const createB = createFactory(MsButton)
 
 describe('button', () => {
   let wrapper
   afterEach(() => {
     wrapper && wrapper.destroy && wrapper.destroy()
-  })
-
-  it('create', () => {
-    Vue.use(MsButton)
-    expect(Vue.component('MsButton')).toBeTruthy()
   })
 
   it('create', () => {
@@ -59,5 +49,26 @@ describe('button', () => {
     })
     const attrs = wrapper.attributes()
     expect(/border-radius: 10px/i.test(attrs.style)).toBeTruthy()
+  })
+
+  it('click', () => {
+    wrapper = createB(
+      {},
+      {
+        slots: {
+          default: 'button'
+        }
+      }
+    )
+
+    const clickSpy = jest.spyOn(wrapper.vm, 'handleClick')
+    const innerClickSpy = jest.spyOn(wrapper.vm, 'handleInnerClick')
+    wrapper.update()
+
+    wrapper.trigger('click')
+    wrapper.find('.ms-button > span').trigger('click')
+
+    expect(clickSpy).toBeCalled()
+    expect(innerClickSpy).toBeCalled()
   })
 })

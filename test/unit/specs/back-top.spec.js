@@ -1,17 +1,12 @@
-import { shallow } from 'vue-test-utils'
-import Vue from 'vue'
-import MsBackTop from 'packages/back-top/index'
+import { createFactory } from '../utils'
+import MsBackTop from '@/back-top/src/main.vue'
 
-const createBT = (propsData = {}, otherOpts = {}) => shallow(MsBackTop, { propsData, ...otherOpts })
+const createBT = createFactory(MsBackTop)
+
 describe('back-top', () => {
   let wrapper
   afterEach(() => {
     wrapper && wrapper.destroy && wrapper.destroy()
-  })
-
-  it('install', () => {
-    Vue.use(MsBackTop)
-    expect(Vue.component('MsBackTop')).toBeTruthy()
   })
 
   it('create', () => {
@@ -40,5 +35,13 @@ describe('back-top', () => {
       }
     )
     expect(wrapper.contains('.test-default-slot')).toBeTruthy()
+  })
+
+  it('click', () => {
+    wrapper = createBT()
+    const spy = jest.spyOn(wrapper.vm, 'handleClick')
+    wrapper.update()
+    wrapper.find('.ms-back-top').trigger('click')
+    expect(spy).toBeCalled()
   })
 })
