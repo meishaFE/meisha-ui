@@ -18,7 +18,6 @@ import Checkbox from '../packages/checkbox/index.js';
 import Picker from '../packages/picker/index.js';
 import Collapse from '../packages/collapse/index.js';
 import Badge from '../packages/badge/index.js';
-import Carousel from '../packages/carousel/index.js';
 import Switch from '../packages/switch/index.js';
 import Textarea from '../packages/textarea/index.js';
 import RadioGroup from '../packages/radio-group/index.js';
@@ -46,7 +45,6 @@ const components = [
   Picker,
   Collapse,
   Badge,
-  Carousel,
   Switch,
   Textarea,
   RadioGroup,
@@ -92,7 +90,6 @@ module.exports = {
   Picker,
   Collapse,
   Badge,
-  Carousel,
   Switch,
   Textarea,
   RadioGroup,
