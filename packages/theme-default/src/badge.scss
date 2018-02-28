@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(badge) {
+  position: relative;
+  display: inline-block;
+  @include e(content) {
+    height: $--badge-size;
+    display: inline-block;
+    padding: 0 $--badge-padding;
+    position: absolute;
+    top: #{$--badge-size / 2 - 2};
+    right: #{$--badge-size / 2};
+    white-space: nowrap;
+    background: $--badge-background-color-default;
+    border-radius: $--badge-radius;
+    @include font-dpr($--font-size-mini);
+    color: $--badge-color-default;
+    line-height:  $--badge-size;
+    transform: translateY(-50%) translateX(100%);
+    @include when(dot) {
+      height: $--badge-dot-size;
+      width: $--badge-dot-size;
+      padding: 0;
+      border-radius: 50%;
+      right: #{2 - $--badge-dot-size};
+    }
+  }
+}
