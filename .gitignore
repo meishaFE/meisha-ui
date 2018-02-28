@@ -62,3 +62,4 @@ typings/
 .npmrc
 dist
 examples/dist
+.history

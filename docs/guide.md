@@ -18,6 +18,7 @@
 * [MessageBox](#messagebox)
 * [Swipe](#swipe)
 * [Checkbox-group](#checkbox-group)
+* [Badge](#badge)
 
 ## Button
 
@@ -526,3 +527,22 @@ l.close();
 | button   | Checkbox 显示为 button 样式，在 Checkbox-Group 中会优先遵循 Checkbox-Group 的值             | Boolean | -      | false  |
 | round    | Checkbox 显示为 button 样式时自定义圆角，在 Checkbox-Group 中会优先遵循 Checkbox-Group 的值 | String  | -      | 4px    |
 | checked  | Checkbox 是否已经选择                                                                       | Boolean | -      | false  |
+
+## Badge
+
+[examples](../examples/components/badge.vue)
+
+### API
+
+| 参数     | 说明                                          | 类型    | 可选值 | 默认值 |
+| -------- | --------------------------------------------- | ------- | ------ | ------ |
+| value    | 显示值                       | String,Number | -      | -   |
+| max | 最大值，超过最大值会显示 '{max}+'，要求 value 是 Number 类型    | Number | -      | -  |
+| is-dot   | 是否只显示小红点            | Boolean | -      | false  |
+| hidden    | 是否隐藏badge | Boolean  | -      | false    |
+
+### slot
+
+| name | 描述           |
+| ---- | -------------- |
+| -    | 添加badge的内容 |

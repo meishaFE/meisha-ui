@@ -62,3 +62,13 @@ $--font-line-height-primary: 24px !default;
 $--button-background-color-default: #f2f2f2;
 $--button-disabled-tint-percent: 60% !default;
 $--button-active-shade-percent: 20% !default;
+
+/* Badge
+-------------------------- */
+$--badge-background-color-default: $--color-danger !default;
+$--badge-color-default: $--color-white !default;
+$--badge-padding: 4px !default;
+$--badge-radius: 100px !default;
+$--badge-size: 14px !default;
+$--badge-font-size: 12px !default;
+$--badge-dot-size: 6px !default;
