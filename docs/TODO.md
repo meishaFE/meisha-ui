@@ -15,3 +15,4 @@
 * [ ] Picker
 * [ ] Datetime Picker
 * [x] Range
+* [x] Badge

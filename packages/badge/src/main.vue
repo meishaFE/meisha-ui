@@ -2,10 +2,10 @@
   <div class="ms-badge">
     <slot></slot>
     <sup
-      v-show="!hidden"
-      v-text="content"
+      v-show="!hidden && ( content || isDot )"
       class="ms-badge__content"
       :class="{ 'is-dot': isDot }">
+      {{content}}
     </sup>
   </div>
 </template>
