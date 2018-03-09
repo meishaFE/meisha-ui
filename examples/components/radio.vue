@@ -50,7 +50,7 @@ export default {
       value2: '1',
       value3: '2',
       value4: '2',
-      value5: false,
+      value5: '1',
       value6: '1'
     };
   }
