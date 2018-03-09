@@ -81,6 +81,10 @@ export default new Router({
     {
       path: '/check-box',
       component: () => import('../components/checkbox.vue')
+    },
+    {
+      path: '/badge',
+      component: () => import('../components/badge.vue')
     }
   ],
   scrollBehavior(to, from, savedPosition) {
