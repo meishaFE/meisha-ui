@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 10px;">
+  <div style="padding: 10px;" @touchmove="handleTouchMove" @scroll="handleScroll">
     <div>滚动测试</div>
     <div>滚动测试</div>
     <div>滚动测试</div>
@@ -75,6 +75,12 @@ export default {
     },
     showModal() {
       this.isModalVisible = true;
+    },
+    handleTouchMove() {
+      console.log('handleTouchMove');
+    },
+    handleScroll() {
+      console.log('handleScroll');
     }
   }
 };
