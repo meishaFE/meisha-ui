@@ -9,17 +9,10 @@ const MOZ_HACK_REGEXP = /^moz([A-Z])/;
 const ieVersion = isServer ? 0 : Number(document.documentMode);
 
 /* istanbul ignore next */
-const trim = function(string) {
-  return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
-};
+const trim = (string = '') => string.replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
+
 /* istanbul ignore next */
-const camelCase = function(name) {
-  return name
-    .replace(SPECIAL_CHARS_REGEXP, function(_, separator, letter, offset) {
-      return offset ? letter.toUpperCase() : letter;
-    })
-    .replace(MOZ_HACK_REGEXP, 'Moz$1');
-};
+const camelCase = name => name.replace(SPECIAL_CHARS_REGEXP, (_, separator, letter, offset) => (offset ? letter.toUpperCase() : letter)).replace(MOZ_HACK_REGEXP, 'Moz$1');
 
 /* istanbul ignore next */
 export const on = (function() {
@@ -69,19 +62,19 @@ export const once = function(el, event, fn) {
 /* istanbul ignore next */
 export function hasClass(el, cls) {
   if (!el || !cls) return false;
-  if (cls.indexOf(' ') !== -1) throw new Error('className should not contain space.');
+  if (~cls.indexOf(' ')) throw new Error('className should not contain space.');
   if (el.classList) {
     return el.classList.contains(cls);
   } else {
-    return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    return !!~(' ' + el.className + ' ').indexOf(' ' + cls + ' ');
   }
 }
 
 /* istanbul ignore next */
-export function addClass(el, cls) {
+export function addClass(el, cls = '') {
   if (!el) return;
   var curClass = el.className;
-  var classes = (cls || '').split(' ');
+  var classes = cls.split(' ');
 
   for (var i = 0, j = classes.length; i < j; i++) {
     var clsName = classes[i];
