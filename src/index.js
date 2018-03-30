@@ -16,7 +16,6 @@ import Label from '../packages/label/index.js';
 import Selector from '../packages/selector/index.js';
 import Checkbox from '../packages/checkbox/index.js';
 import Picker from '../packages/picker/index.js';
-import Collapse from '../packages/collapse/index.js';
 import Badge from '../packages/badge/index.js';
 import Switch from '../packages/switch/index.js';
 import Textarea from '../packages/textarea/index.js';
@@ -43,7 +42,6 @@ const components = [
   Selector,
   Checkbox,
   Picker,
-  Collapse,
   Badge,
   Switch,
   Textarea,
@@ -88,7 +86,6 @@ module.exports = {
   Selector,
   Checkbox,
   Picker,
-  Collapse,
   Badge,
   Switch,
   Textarea,
