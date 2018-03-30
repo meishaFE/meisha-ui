@@ -135,13 +135,14 @@ toast.close();
 
 ### options
 
-| 参数         | 说明                          | 类型   | 可选值                | 默认值 |
-| ------------ | ----------------------------- | ------ | --------------------- | ------ |
-| message      | Toast 显示的文本内容          | String | -                     | -      |
-| position     | Toast 显示的位置              | String | top / middle / bottom | middle |
-| custom-class | 自定义的 class                | String | -                     | -      |
-| icon-class   | icon 的 class                 | String | -                     | -      |
-| type         | 提示的类型，会显示对应的 icon | String | success / error       | -      |
+| 参数         | 说明                                          | 类型   | 可选值                | 默认值 |
+| ------------ | --------------------------------------------- | ------ | --------------------- | ------ |
+| message      | Toast 显示的文本内容                          | String | -                     | -      |
+| position     | Toast 显示的位置                              | String | top / middle / bottom | middle |
+| custom-class | 自定义的 class                                | String | -                     | -      |
+| icon-class   | icon 的 class                                 | String | -                     | -      |
+| type         | 提示的类型，会显示对应的 icon                 | String | success / error       | -      |
+| duration     | toast 显示的时间，单位：毫秒（-1 则为不关闭） | Number | -                     | 1500   |
 
 ## Back-top
 

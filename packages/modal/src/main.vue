@@ -2,7 +2,9 @@
     <div class="ms-modal"
          v-show="visible"
          :style="{backgroundColor: color}"
-         @click.prevent.stop="handleClick">
+         @click.prevent.stop="handleClick"
+         @touchmove.prevent.stop
+         @scroll.prevent.stop>
     </div>
 </template>
 

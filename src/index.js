@@ -16,9 +16,7 @@ import Label from '../packages/label/index.js';
 import Selector from '../packages/selector/index.js';
 import Checkbox from '../packages/checkbox/index.js';
 import Picker from '../packages/picker/index.js';
-import Collapse from '../packages/collapse/index.js';
 import Badge from '../packages/badge/index.js';
-import Carousel from '../packages/carousel/index.js';
 import Switch from '../packages/switch/index.js';
 import Textarea from '../packages/textarea/index.js';
 import RadioGroup from '../packages/radio-group/index.js';
@@ -44,9 +42,7 @@ const components = [
   Selector,
   Checkbox,
   Picker,
-  Collapse,
   Badge,
-  Carousel,
   Switch,
   Textarea,
   RadioGroup,
@@ -72,7 +68,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.25',
+  version: '0.0.27',
   install,
   Button,
   Cell,
@@ -90,9 +86,7 @@ module.exports = {
   Selector,
   Checkbox,
   Picker,
-  Collapse,
   Badge,
-  Carousel,
   Switch,
   Textarea,
   RadioGroup,

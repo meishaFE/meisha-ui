@@ -4,6 +4,7 @@
 @import 'mixins/utils';
 
 @include b(loading) {
+  transform: scale(0.6, 0.6);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -95,16 +96,15 @@
   }
 
   @include e(text) {
-    @include font-dpr(16px);
+    @include font-dpr(24px);
 
     position: absolute;
     right: 0;
-    bottom: 16px;
+    bottom: 14px;
     left: 0;
 
     overflow: hidden;
 
-    height: 22px;
     margin: auto;
 
     text-align: center;
