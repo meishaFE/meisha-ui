@@ -1,0 +1,2 @@
+webpackJsonp([8],{AU0D:function(t,e,s){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a={name:"MsToastExample",created:function(){var t=this;setTimeout(function(){t.$toast("无 icon 提示"),t.$toast.success("操作成功"),t.$toast.error("操作失败")},1e3)}},n=function(){var t=this,e=t.$createElement,s=t._self._c||e;return s("div",{staticClass:"ms-toast-example"})},o=[],c=s("XyMi"),l=!1,r=null,u=null,i=null,f=Object(c["a"])(a,n,o,l,r,u,i);e["default"]=f.exports}});
+//# sourceMappingURL=8.ae69b07a.js.map
