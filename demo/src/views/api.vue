@@ -21,7 +21,7 @@
 <li><a href="#badge">Badge</a></li>
 </ul>
 <h2 id="button">Button</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/button.vue">examples</a></p>
+<p><a href="../examples/components/button.vue">examples</a></p>
 <h3 id="demo">Demo</h3>
 <pre><code class="html language-html">&lt;ms-button size="large" type="warning"&gt;
   这是按钮
@@ -99,7 +99,7 @@
 </tbody>
 </table>
 <h2 id="cell">Cell</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/cell.vue">examples</a></p>
+<p><a href="../examples/components/cell.vue">examples</a></p>
 <h3 id="api-1">API</h3>
 <table>
 <thead>
@@ -151,7 +151,7 @@
 </tbody>
 </table>
 <h2 id="footertabtabitem">Footer-tab &amp; Tab-item</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/footer-tab.vue">examples</a></p>
+<p><a href="../examples/components/footer-tab.vue">examples</a></p>
 <h3 id="demo-1">Demo</h3>
 <pre><code class="js language-js"> &lt;ms-footer-tab v-model="activated"
                        @change="handleFooterTabChange"&gt;
@@ -256,7 +256,7 @@
 </tbody>
 </table>
 <h2 id="toast">Toast</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/toast.vue">examples</a></p>
+<p><a href="../examples/components/toast.vue">examples</a></p>
 <h3 id="demo-2">Demo</h3>
 <pre><code class="js language-js">// 挂载在 vue 下
 Vue.prototype.$toast('操作');
@@ -326,7 +326,7 @@ toast.close();
 </tbody>
 </table>
 <h2 id="backtop">Back-top</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/back-top.vue">examples</a></p>
+<p><a href="../examples/components/back-top.vue">examples</a></p>
 <h3 id="api-2">API</h3>
 <table>
 <thead>
@@ -395,7 +395,7 @@ toast.close();
 </tbody>
 </table>
 <h2 id="modal">Modal</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/modal.vue">examples</a></p>
+<p><a href="../examples/components/modal.vue">examples</a></p>
 <h3 id="api-3">API</h3>
 <table>
 <thead>
@@ -429,13 +429,6 @@ toast.close();
 <td>-</td>
 <td>false</td>
 </tr>
-<tr>
-<td>color</td>
-<td>Modal 的颜色</td>
-<td>String</td>
-<td>-</td>
-<td>rgba(0, 0, 0, 0.2)</td>
-</tr>
 </tbody>
 </table>
 <h3 id="events-1">Events</h3>
@@ -461,7 +454,7 @@ toast.close();
 </tbody>
 </table>
 <h2 id="popup">Popup</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/popup.vue">examples</a></p>
+<p><a href="../examples/components/popup.vue">examples</a></p>
 <h3 id="api-4">API</h3>
 <table>
 <thead>
@@ -574,7 +567,7 @@ toast.close();
 </tbody>
 </table>
 <h2 id="loading">Loading</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/loading.vue">examples</a></p>
+<p><a href="../examples/components/loading.vue">examples</a></p>
 <h3 id="demo-3">Demo</h3>
 <pre><code class="js language-js">import { Loading } from 'meisha-ui';
 
@@ -610,7 +603,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="switch">Switch</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/switch.vue">examples</a></p>
+<p><a href="../examples/components/switch.vue">examples</a></p>
 <h3 id="api-5">API</h3>
 <table>
 <thead>
@@ -693,7 +686,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="radio">Radio</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/radio.vue">examples</a></p>
+<p><a href="../examples/components/radio.vue">examples</a></p>
 <h3 id="api-6">API</h3>
 <table>
 <thead>
@@ -790,7 +783,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="input">Input</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/textarea.vue">examples</a></p>
+<p><a href="../examples/components/textarea.vue">examples</a></p>
 <h3 id="todo">TODO</h3>
 <ol>
 <li>表单校验</li>
@@ -898,7 +891,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="textarea">Textarea</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/input.vue">examples</a></p>
+<p><a href="../examples/components/input.vue">examples</a></p>
 <h3 id="todo-1">TODO</h3>
 <ol>
 <li>表单校验</li>
@@ -999,7 +992,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="inputnumber">Input-Number</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/input-number.vue">examples</a></p>
+<p><a href="../examples/components/input-number.vue">examples</a></p>
 <h3 id="api-9">API</h3>
 <table>
 <thead>
@@ -1098,7 +1091,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="selector">Selector</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/selector.vue">examples</a></p>
+<p><a href="../examples/components/selector.vue">examples</a></p>
 <p>这个组件暂时只是接收了 value，未添加 picker 组件，后续迭代</p>
 <h3 id="api-10">API</h3>
 <table>
@@ -1167,7 +1160,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="range">range</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/range.vue">examples</a></p>
+<p><a href="../examples/components/range.vue">examples</a></p>
 <h3 id="api-11">API</h3>
 <table>
 <thead>
@@ -1261,7 +1254,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="messagebox">MessageBox</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/message-box.vue">examples</a></p>
+<p><a href="../examples/components/message-box.vue">examples</a></p>
 <h3 id="api-12">API</h3>
 <table>
 <thead>
@@ -1413,7 +1406,7 @@ l.close();
 </table>
 <h2 id="swipe">Swipe</h2>
 <p><strong>需要重构</strong></p>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/swipe.vue">examples</a></p>
+<p><a href="../examples/components/swipe.vue">examples</a></p>
 <h3 id="api-13">API</h3>
 <table>
 <thead>
@@ -1508,7 +1501,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="checkboxgroup">Checkbox-group</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/checkbox.vue">examples</a></p>
+<p><a href="../examples/components/checkbox.vue">examples</a></p>
 <h3 id="api-14">API</h3>
 <table>
 <thead>
@@ -1608,7 +1601,7 @@ l.close();
 </tbody>
 </table>
 <h2 id="badge">Badge</h2>
-<p><a href="https://github.com/meishaFE/meisha-ui/blob/dev/examples/components/badge.vue">examples</a></p>
+<p><a href="../examples/components/badge.vue">examples</a></p>
 <h3 id="api-15">API</h3>
 <table>
 <thead>
@@ -1644,7 +1637,7 @@ l.close();
 </tr>
 <tr>
 <td>hidden</td>
-<td>是否隐藏 badge</td>
+<td>是否隐藏badge</td>
 <td>Boolean</td>
 <td>-</td>
 <td>false</td>
@@ -1662,15 +1655,10 @@ l.close();
 <tbody>
 <tr>
 <td>-</td>
-<td>添加 badge 的内容</td>
+<td>添加badge的内容</td>
 </tr>
 </tbody>
 </table></article></div></template>
-
-
-
-
-
 
 <script>
 export default {};

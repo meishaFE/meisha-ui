@@ -18,28 +18,16 @@ describe('footer-tab', () => {
   })
 
   it('tab-item create', () => {
-    // wrapper = createFooterTab(
-    //   {
-    //     value: 1
-    //   },
-    //   {
-    //     slots: {
-    //       default: MsTabItem
-    //     }
-    //   }
-    // )
-    const $parent = { value: 1, $emit: () => {} }
-    wrapper = createTabItem(
-      { value: 1 },
+    wrapper = createFooterTab(
       {
-        mocks: {
-          $parent
+        value: 1
+      },
+      {
+        slots: {
+          default: MsTabItem
         }
       }
     )
-
     expect(wrapper.contains('.ms-tab-item')).toBeTruthy()
   })
-
-  it()
 })
