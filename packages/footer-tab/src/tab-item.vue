@@ -21,8 +21,8 @@ export default {
 
   methods: {
     handleTabItemClick(evt) {
-      // this.$parent.$emit('input', this.value, evt);
-      // this.$parent.$emit('change', this.value, evt);
+      this.$parent.$emit('input', this.value, evt);
+      this.$parent.$emit('change', this.value, evt);
     }
   }
 };
