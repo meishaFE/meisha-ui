@@ -31,7 +31,7 @@ describe('badge', () => {
   it('hidden', () => {
     wrapper = createBa({ hidden: true })
     const attrs = wrapper.attributes()
-    expect(/display: none/i.test(attrs.style)).toBeFalsy()
+    expect(/display: ?none/i.test(attrs.style)).toBeFalsy()
   })
 
   it('isDot', () => {

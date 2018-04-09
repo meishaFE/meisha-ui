@@ -1,7 +1,7 @@
 <template>
     <div class="ms-tab-item"
          @click="handleTabItemClick"
-         :class="{ 'is-activated': $parent.value === value }">
+         :class="{ 'is-activated': $parent && $parent.value === value }">
         <div v-if="$slots.icon" class="ms-tab-item__icon">
             <slot name="icon"></slot>
         </div>
@@ -21,8 +21,13 @@ export default {
 
   methods: {
     handleTabItemClick(evt) {
-      this.$parent.$emit('input', this.value, evt);
-      this.$parent.$emit('change', this.value, evt);
+      if (!this.$parent) {
+        this.$emit('input', this.value, evt);
+        this.$emit('change', this.value, evt);
+      } else {
+        this.$parent.$emit('input', this.value, evt);
+        this.$parent.$emit('change', this.value, evt);
+      }
     }
   }
 };

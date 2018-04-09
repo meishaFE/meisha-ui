@@ -1,9 +1,9 @@
-import { createFactory, mountFactory } from '../utils'
+import { createFactory } from '../utils'
 import MsFooterTab from '@/footer-tab/src/main.vue'
 import MsTabItem from '@/footer-tab/src/tab-item.vue'
 
 const createFooterTab = createFactory(MsFooterTab)
-const createTabItem = mountFactory(MsTabItem)
+const createTabItem = createFactory(MsTabItem)
 
 describe('footer-tab', () => {
   let wrapper
@@ -29,5 +29,13 @@ describe('footer-tab', () => {
       }
     )
     expect(wrapper.contains('.ms-tab-item')).toBeTruthy()
+  })
+
+  it('tab-item click', () => {
+    wrapper = createTabItem()
+    const clickSpy = jest.spyOn(wrapper.vm, 'handleTabItemClick')
+    wrapper.update()
+    wrapper.trigger('click')
+    expect(clickSpy).toBeCalled()
   })
 })
