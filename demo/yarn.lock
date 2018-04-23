@@ -5303,9 +5303,9 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
 
-meisha-ui@^0.0.27:
-  version "0.0.27"
-  resolved "https://registry.npmjs.org/meisha-ui/-/meisha-ui-0.0.27.tgz#e40ae51e9818807ec4187bc5acc54f1540ce5f48"
+meisha-ui@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.npmjs.org/meisha-ui/-/meisha-ui-0.0.31.tgz#3106da21ab051495f9bb46afd75c0c0f9826e81a"
   dependencies:
     async-validator "^1.8.2"
     core-js "^2.5.3"
