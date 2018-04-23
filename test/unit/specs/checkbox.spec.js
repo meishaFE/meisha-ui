@@ -52,7 +52,7 @@ describe('checkbox', () => {
       round: '10px'
     })
     const attrs = wrapper.attributes()
-    expect(/border-radius: 10px/i.test(attrs.style)).toBeTruthy()
+    expect(/border-radius: ?10px/i.test(attrs.style)).toBeTruthy()
   })
 
   it('change', () => {
