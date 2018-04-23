@@ -17,6 +17,7 @@
                         confirmButtonText="确定"
                         @open="hnadleOpen"
                         @close="handleClose"
+                        modalColor="#000"
                         @confirm="handleConfirm">
             <div>这是弹窗内容</div>
         </ms-message-box>
@@ -103,6 +104,9 @@ export default {
 };
 </script>
 <style lang="scss">
+html {
+  height: 100%;
+}
 .red {
   color: #ff4742;
 }

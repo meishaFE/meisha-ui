@@ -132,3 +132,5 @@ input[type='date']::-webkit-clear-button {
   display: none;
 }
 </style>
+<style lang="scss" src="../packages/theme-default/src/index.scss">
+</style>

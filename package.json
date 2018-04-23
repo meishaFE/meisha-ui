@@ -2,10 +2,7 @@
   "name": "meisha-ui",
   "version": "0.0.30",
   "description": "Mobile UI Components based on Vue",
-  "keywords": [
-    "Components",
-    "UI"
-  ],
+  "keywords": ["Components", "UI"],
   "homepage": "https://github.com/meishaFE/meisha-ui#readme",
   "bugs": {
     "url": "https://github.com/meishaFE/meisha-ui/issues"
@@ -141,11 +138,6 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8",
-    "iOS 7"
-  ],
+  "browserslist": ["iOS >= 7", "Android >= 4.1"],
   "unpkg": "lib/meisha.js"
 }

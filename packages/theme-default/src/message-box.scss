@@ -50,14 +50,14 @@
   }
 
   @include e(button) {
-    width: 50%;
     display: block;
     background-color: #fff;
     flex: 1;
+    text-align: center;
     margin: 0;
     border: 0;
     outline: none;
-    @include font-dpr( $--font-size-base);
+    @include font-dpr($--font-size-base);
 
     &:focus {
       outline: none;

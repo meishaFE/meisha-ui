@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="position: absolute; z-index: 2001;">
         <transition name="ms-message-box-fade">
             <div class="ms-message-box"
                  v-show="visible">
@@ -160,3 +160,6 @@ export default {
   }
 };
 </script>
+<style>
+
+</style>
