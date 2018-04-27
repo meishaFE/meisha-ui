@@ -1,5 +1,7 @@
 # meisha-ui
 
+[![CircleCI](https://img.shields.io/circleci/project/github/JxJayden/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui)
+
 > Mobile UI Components based on Vue.
 
 ## Links
