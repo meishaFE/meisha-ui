@@ -1,7 +1,7 @@
 # meisha-ui
 
 [![Build Status](https://travis-ci.org/meishaFE/meisha-ui.svg?branch=dev)](https://travis-ci.org/meishaFE/meisha-ui)
-(https://github.com/meishaFE/meisha-ui) [![npm](https://img.shields.io/npm/l/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui) [![npm](https://img.shields.io/npm/dt/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui) [![node](https://img.shields.io/node/v/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui)
+[![npm](https://img.shields.io/npm/l/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui) [![npm](https://img.shields.io/npm/dt/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui) [![node](https://img.shields.io/node/v/meisha-ui.svg)](https://github.com/meishaFE/meisha-ui)
 
 > Mobile UI Components based on Vue.
 
