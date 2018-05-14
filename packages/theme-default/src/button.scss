@@ -54,10 +54,10 @@
 
   // type
   @include m(default) {
-    @include button-variant($--color-black, $--button-background-color-default, $--button-background-color-default, $--color-text-secondary);
+    @include button-variant($--color-text-secondary, $--button-background-color-default, $--button-background-color-default, $--color-text-secondary);
 
     &:not(.is-disabled):active {
-      background: mix($--color-black, $--button-background-color-default, 5%);
+      background: mix($--color-text-secondary, $--button-background-color-default, 5%);
     }
     @include when(disabled) {
       color: mix($--color-white, $--color-text-secondary, 50%) !important;

@@ -68,7 +68,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
-  version: '0.0.31',
+  version: '0.0.32',
   install,
   Button,
   Cell,
