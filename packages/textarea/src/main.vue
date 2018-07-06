@@ -6,14 +6,13 @@
                    :class="{'is-required': required}"
                    v-show="label">{{label}}</label>
             <textarea class="ms-textarea__core"
-                      :rows="4"
+                      ref="textarea"
+                      v-on="textareaListeners"
+                      :rows="rows"
                       :placeholder="placeholder"
                       :disabled="disabled"
-                      @change="$emit('change', currentValue)"
-                      ref="textarea"
                       :readonly="readonly"
-                      :value="currentValue"
-                      @input="handleInput"></textarea>
+                      :value="currentValue"></textarea>
         </div>
     </ms-cell>
 </template>
@@ -56,11 +55,26 @@ export default {
 
   methods: {
     handleInput(evt) {
-      this.currentValue = evt.target.value;
     },
     handleClear() {
       if (this.disabled || this.readonly) return;
       this.currentValue = '';
+    }
+  },
+
+  computed: {
+    textareaListeners() {
+      const vm = this;
+      return Object.assign({}, this.$listeners, {
+        input(event) {
+          const value = event.target.value;
+          vm.currentValue = value;
+          this.$emit('input', value);
+        },
+        change() {
+          this.$emit('change', vm.currentValue);
+        }
+      });
     }
   }
 };

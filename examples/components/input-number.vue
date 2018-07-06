@@ -2,7 +2,8 @@
     <div style="padding: 20px; background: #fff;">
         <div style="margin-bottom: 10px;">
             <ms-input-number v-model="number"
-            @change="handleChange"></ms-input-number>
+            @change="handleChange"
+            @focus="handleFocus"></ms-input-number>
         </div>
         <div style="margin-bottom: 10px;">
             <ms-input-number disabled
@@ -41,6 +42,9 @@ export default {
   methods: {
     handleChange() {
       console.log(arguments);
+    },
+    handleFocus() {
+      console.log('focus');
     }
   }
 };

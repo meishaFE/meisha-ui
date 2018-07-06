@@ -22,5 +22,4 @@ describe('input-number', () => {
     expect(wrapper.vm.debounce).toBe(300)
     expect(wrapper.vm.size).toBe('normal')
   })
-
 })

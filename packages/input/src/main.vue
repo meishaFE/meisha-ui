@@ -1,22 +1,21 @@
 <template>
-    <ms-cell class="ms-input"
-             :class="{'is-disabled': disabled || readonly}">
-        <div class="ms-input__inner">
-            <label class="ms-input__label"
-                   :class="{'is-required': required}"
-                   v-show="label">{{label}}</label>
-            <input @change="$emit('change', currentValue)"
-                   ref="input"
-                   class="ms-input__input"
-                   :placeholder="placeholder"
-                   :type="type"
-                   :disabled="disabled"
-                   :readonly="readonly"
-                   :value="currentValue"
-                   @input="handleInput"
-                   :style="[inputStyle]">
-        </div>
-    </ms-cell>
+  <ms-cell class="ms-input"
+           :class="{'is-disabled': disabled || readonly}">
+    <div class="ms-input__inner">
+      <label class="ms-input__label"
+             :class="{'is-required': required}"
+             v-show="label">{{label}}</label>
+      <input v-on="inputListeners"
+             ref="input"
+             class="ms-input__input"
+             :placeholder="placeholder"
+             :type="type"
+             :disabled="disabled"
+             :readonly="readonly"
+             :value="currentValue"
+             :style="[inputStyle]">
+    </div>
+  </ms-cell>
 </template>
 
 <script>
@@ -62,10 +61,6 @@ export default {
   },
 
   methods: {
-    handleInput(evt) {
-      this.currentValue = evt.target.value;
-      this.$emit('input', this.currentValue);
-    },
     handleClear() {
       if (this.disabled || this.readonly) return;
       this.currentValue = '';
@@ -81,6 +76,19 @@ export default {
       return {
         [this.textAlign ? 'textAlign' : '']: this.textAlign
       };
+    },
+    inputListeners() {
+      const vm = this;
+      return Object.assign({}, this.$listeners, {
+        input(event) {
+          const value = event.target.value;
+          vm.currentValue = value;
+          vm.$emit('input', value);
+        },
+        change(event) {
+          vm.$emit('change', vm.currentValue);
+        }
+      });
     }
   },
 

@@ -18,14 +18,12 @@
                 <i class="ms-icon-plus"></i>
             </span>
             <input class="ms-input-number__core"
+                   ref="input"
+                   v-on="inputListeners"
                    :value="currentValue"
-                   @blur="handleBlur"
-                   @focus="handleFocus"
-                   @input="debounceHandleInput"
                    :disabled="disabled"
                    :max="max"
-                   :min="min"
-                   ref="input">
+                   :min="min">
         </div>
     </div>
 </template>
@@ -98,6 +96,14 @@ export default {
     precision() {
       const { value, step, getPrecision } = this;
       return Math.max(getPrecision(value), getPrecision(step));
+    },
+    inputListeners() {
+      const vm = this;
+      return Object.assign({}, this.$listeners, {
+        input(event) {
+          vm.debounceHandleInput(event);
+        }
+      });
     }
   },
 
@@ -164,12 +170,6 @@ export default {
       const newVal = this._increase(value, this.step);
       if (newVal > this.max) return;
       this.setCurrentValue(newVal);
-    },
-    handleBlur(event) {
-      this.$emit('blur', event);
-    },
-    handleFocus(event) {
-      this.$emit('focus', event);
     },
     focus() {
       this.$refs['input'].focus();
