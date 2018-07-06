@@ -68,6 +68,11 @@ export default {
     setCurrentValue(newVal) {
       if (this.currentValue === newVal) return;
       this.currentValue = newVal;
+    },
+    handleInput(evt) {
+      const value = evt.target.value;
+      this.currentValue = value;
+      this.$emit('input', value);
     }
   },
 
@@ -81,9 +86,7 @@ export default {
       const vm = this;
       return Object.assign({}, this.$listeners, {
         input(event) {
-          const value = event.target.value;
-          vm.currentValue = value;
-          vm.$emit('input', value);
+          vm.handleInput(event);
         },
         change(event) {
           vm.$emit('change', vm.currentValue);
