@@ -69,6 +69,18 @@ describe('input', () => {
     expect(wrapper.contains('.is-required')).toBeTruthy()
   })
 
+  it('slot', () => {
+    wrapper = createInput(
+      {},
+      {
+        slots: {
+          default: '<span class="test-default-slot">test</span>'
+        }
+      }
+    )
+    expect(wrapper.contains('.test-default-slot')).toBeTruthy()
+  })
+
   it('setCurrentValue', () => {
     const TEXT_VALUE = 'TEXT_VALUE'
     wrapper = createInput()

@@ -2,9 +2,11 @@
   <ms-cell class="ms-input"
            :class="{'is-disabled': disabled || readonly}">
     <div class="ms-input__inner">
-      <label class="ms-input__label"
-             :class="{'is-required': required}"
-             v-show="label">{{label}}</label>
+      <slot>
+        <label class="ms-input__label"
+              :class="{'is-required': required}"
+              v-show="label">{{label}}</label>
+      </slot>
       <input v-on="inputListeners"
              ref="input"
              class="ms-input__input"
