@@ -7,7 +7,7 @@
                 <i slot="icon"
                    class="ms-icon-arrow-right"></i>
                 tab-item1</ms-tab-item>
-            <ms-tab-item value="2">
+            <ms-tab-item value="2" disabled>
                 <i slot="icon"
                    class="ms-icon-arrow-left"></i>
                 tab-item2</ms-tab-item>

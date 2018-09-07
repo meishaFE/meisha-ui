@@ -38,4 +38,9 @@ describe('footer-tab', () => {
     wrapper.trigger('click')
     expect(clickSpy).toBeCalled()
   })
+
+  it('tab-item disabled', () => {
+    wrapper = createTabItem({ disabled: true })
+    expect(wrapper.contains('.is-disabled')).toBeTruthy()
+  })
 })
