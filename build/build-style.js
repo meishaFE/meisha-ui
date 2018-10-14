@@ -1,30 +1,38 @@
-'use strict'
+'use strict';
 
-var gulp = require('gulp')
-var sass = require('gulp-sass')
-var autoprefixer = require('gulp-autoprefixer')
-var cssmin = require('gulp-cssmin')
-const rename = require('gulp-rename')
-var pkg = require('../package.json')
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const cssmin = require('gulp-cssmin');
+const pkg = require('../package.json');
+
+const task = gulp
+  .src('../packages/theme-default/src/*.scss')
+  .pipe(sass.sync())
+  .pipe(
+    autoprefixer({
+      browsers: pkg.browserslist,
+      cascade: false
+    })
+  )
+  .pipe(cssmin());
+
+gulp.task('testCompile', function() {
+  return task.pipe(gulp.dest('../packages/theme-default/lib/'));
+});
 
 gulp.task('compile', function() {
-  return gulp
-    .src('../src/styles/index.scss')
-    .pipe(sass.sync())
-    .pipe(
-      autoprefixer({
-        browsers: pkg.browserslist,
-        cascade: false
-      })
-    )
-    .pipe(cssmin())
-    .pipe(rename('meisha.css'))
-    .pipe(gulp.dest('../dist/styles'))
-})
+  return task.pipe(gulp.dest('../lib/styles/'));
+});
 
 // 拷贝字体文件
-gulp.task('fonts', function() {
-  gulp.src('../src/styles/common/iconfont/fonts/*.*').pipe(gulp.dest('../dist/styles/fonts'))
-})
+gulp.task('testFonts', function() {
+  gulp.src('../packages/theme-default/src/fonts/*.*').pipe(gulp.dest('../packages/theme-default/lib/fonts'));
+});
 
-gulp.task('default', ['compile', 'fonts'])
+gulp.task('fonts', function() {
+  gulp.src('../packages/theme-default/src/fonts/*.*').pipe(gulp.dest('../lib/styles/fonts'));
+});
+
+gulp.task('build', ['compile', 'fonts']);
+gulp.task('test', ['testCompile', 'testFonts']);
