@@ -1,0 +1,118 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(message-box) {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  border-radius: 6px;
+  width: 80%;
+  @include font-dpr( $--font-size-base);
+  -webkit-user-select: none;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: 0.2s;
+  padding-top: 10px;
+  z-index: 1000;
+
+  @include e(title) {
+    font-size: inherit;
+    color: $--color-text-primary;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  @include e(message) {
+    word-wrap: break-word;
+    font-size: inherit;
+    color: $--color-text-regular;
+    font-weight: normal;
+  }
+
+  @include e(content) {
+    max-height: 50vh;
+    overflow: scroll;
+    padding: 10px 20px 20px;
+  }
+
+  @include e(footer) {
+    height: 50px;
+    border-top: 1px solid #f7f9fb;
+    @include when(default) {
+      display: flex;
+    }
+  }
+
+  @include e(button) {
+    display: block;
+    background-color: #fff;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    border: 0;
+    outline: none;
+    @include font-dpr($--font-size-base);
+
+    &:focus {
+      outline: none;
+    }
+
+    @include when(border-right) {
+      border-right: 1px solid #f7f9fb;
+    }
+  }
+
+  @include e(cancel) {
+    color: $--color-text-thirdly;
+  }
+
+  @include e(confirm) {
+    color: $--color-primary;
+  }
+}
+
+.ms-message-box-fade-enter {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+}
+.ms-message-box-fade-leave-active {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+}
+
+.ms-msbox-modal-fade-enter-active {
+  animation: msbox-modal-fade-in 0.3s;
+  animation-delay: 0.3s;
+}
+
+.ms-msbox-modal-fade-leave-active {
+  animation: msbox-modal-fade-out 0.3s;
+}
+
+@keyframes msbox-modal-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes msbox-modal-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,65 @@
+@import './common/_var.scss';
+
+@font-face {
+  font-family: 'meisha-icons';
+  src: url('#{$--font-path}/meisha-icons.eot'); /* IE9*/
+  src: url('#{$--font-path}/meisha-icons.eot#iefix') format('embedded-opentype'), url('#{$--font-path}/meisha-icons.woff') format('woff'),
+    url('#{$--font-path}/meisha-icons.ttf') format('truetype'), url('#{$--font-path}/meisha-icons.svg#iconfont') format('svg'); /* iOS 4.1- */
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='ms-icon-'],
+[class*=' ms-icon-'] {
+  font-family: 'meisha-icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ms-icon-arrow-right:before {
+  content: '\e6eb';
+}
+
+.ms-icon-arrow-left:before {
+  content: '\e6ec';
+}
+
+.ms-icon-arrow-top:before {
+  content: '\e6ef';
+}
+.ms-icon-success:before {
+  content: '\e6f4';
+}
+
+.ms-icon-error:before {
+  content: '\e6f3';
+}
+
+.ms-icon-close:before {
+  content: '\e6f5';
+}
+
+.ms-icon-plus:before {
+  content: '\e6fb';
+}
+
+.ms-icon-minus:before {
+  content: '\e6fc';
+}
+
+.ms-icon-checkbox-normal:before {
+  content: '\e704';
+}
+
+.ms-icon-checkbox-active:before {
+  content: '\e705';
+}
+
+// TODO: 添加其他按钮

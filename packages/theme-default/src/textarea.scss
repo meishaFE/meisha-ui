@@ -1,0 +1,58 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(textarea) {
+  @include font-dpr($--font-size-base);
+  @include e(inner) {
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  @include e(label) {
+    font-size: inherit;
+    color: $--color-text-regular;
+    width: 30%;
+    overflow: hidden;
+
+    @include when(required) {
+      display: flex;
+      &::after {
+        content: '*';
+        display: block;
+        @include font-dpr($--font-size-base);
+        color: $--color-danger;
+      }
+    }
+  }
+
+  @include e(core) {
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    flex: 1;
+    outline: 0;
+    @include font-dpr($--font-size-small);
+    width: 100%;
+    outline: 0;
+    line-height: 1.6;
+    font-size: inherit;
+    width: 100%;
+    background: transparent;
+
+    @include placeholder {
+      font-size: inherit;
+      color: $--color-text-fourthly;
+    }
+  }
+
+  @include when(disabled) {
+    background: #fcfcfc;
+    .ms-textarea__label,
+    .ms-textarea__core {
+      opacity: 0.3;
+    }
+  }
+}
