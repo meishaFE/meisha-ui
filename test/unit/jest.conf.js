@@ -1,12 +1,11 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
-  moduleFileExtensions: ['js', 'vue'],
+  moduleFileExtensions: ['js', 'json', 'vue'],
   moduleNameMapper: {
-    '@/([^\\.]*).vue$': '<rootDir>/packages/$1.vue',
-    '@/([^\\.]*)$': '<rootDir>/packages/$1.js',
-    '^vue$': 'vue/dist/vue.common.js'
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '^packages/(.*)$': '<rootDir>/packages/$1'
   },
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
@@ -14,5 +13,7 @@ module.exports = {
   },
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   setupFiles: ['<rootDir>/test/unit/setup'],
-  testPathIgnorePatterns: ['demo']
-}
+  mapCoverage: true,
+  coverageDirectory: '<rootDir>/test/unit/coverage',
+  collectCoverageFrom: ['src/**/*.{js,vue}', 'packages/**/*.{js,vue}', '!src/main.js', '!**/node_modules/**']
+};
