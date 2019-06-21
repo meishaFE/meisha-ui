@@ -3,7 +3,6 @@
 $--color-white: #fff !default;
 $--color-black: #000 !default;
 
-// TODO: add color
 $--color-primary: #00ca9d !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 1ACFA7 */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 33D5B1 */
@@ -14,6 +13,16 @@ $--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /
 $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* B3EFE2 */
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* CCF4EB */
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* E6FAF5 */
+
+$--color-primary-dark-1: mix($--color-black, $--color-primary, 10%) !default;
+$--color-primary-dark-2: mix($--color-black, $--color-primary, 20%) !default;
+$--color-primary-dark-3: mix($--color-black, $--color-primary, 30%) !default;
+$--color-primary-dark-4: mix($--color-black, $--color-primary, 40%) !default;
+$--color-primary-dark-5: mix($--color-black, $--color-primary, 50%) !default;
+$--color-primary-dark-6: mix($--color-black, $--color-primary, 60%) !default;
+$--color-primary-dark-7: mix($--color-black, $--color-primary, 70%) !default;
+$--color-primary-dark-8: mix($--color-black, $--color-primary, 80%) !default;
+$--color-primary-dark-9: mix($--color-black, $--color-primary, 90%) !default;
 
 $--color-success: #fff !default; // TODO
 $--color-warning: #ff9c19 !default;
@@ -40,9 +49,26 @@ $--color-text-fourthly: #969998 !default;
 /* Font
 -------------------------- */
 $--font-path: 'fonts' !default;
+$--font-size-large: 18px !default;
 $--font-size-base: 17px !default;
 $--font-size-small: 15px !default;
 $--font-size-mini: 12px !default;
 $--font-size-large: 18px !default;
 $--font-weight-primary: 500 !default;
 $--font-line-height-primary: 24px !default;
+
+/* Button
+-------------------------- */
+$--button-background-color-default: #f2f2f2;
+$--button-disabled-tint-percent: 60% !default;
+$--button-active-shade-percent: 20% !default;
+
+/* Badge
+-------------------------- */
+$--badge-background-color-default: $--color-danger !default;
+$--badge-color-default: $--color-white !default;
+$--badge-padding: 4px !default;
+$--badge-radius: 100px !default;
+$--badge-size: 14px !default;
+$--badge-font-size: 12px !default;
+$--badge-dot-size: 6px !default;

@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(checkbox) {
+  display: inline-flex;
+  align-items: center;
+  @include font-dpr($--font-size-small);
+  color: $--color-text-secondary;
+
+  @include when(button) {
+    justify-content: center;
+    padding: 7px 15px;
+    border: 1px solid #dadfe6;
+    border-radius: 4px;
+
+    &.is-checked {
+      color: #00ca9d;
+      border-color: #00ca9d;
+    }
+
+    &.is-disabled {
+      opacity: 0.3;
+    }
+  }
+
+  @include e(label) {
+    @include font-dpr($--font-size-small);
+  }
+
+  @include e(input) {
+    appearance: none;
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+}

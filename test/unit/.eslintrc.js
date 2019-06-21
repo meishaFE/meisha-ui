@@ -16,7 +16,7 @@ module.exports = {
   plugins: ['html'],
   // add your custom rules here
   rules: {
-    semi: ['error', 'always'],
+    semi: ['error', 'never'],
     'space-before-function-paren': 0,
     'max-len': ['warn', 180],
     // 一个函数的复杂性不超过 10，所有分支、循环、回调加在一起，在一个函数里不超过 10 个

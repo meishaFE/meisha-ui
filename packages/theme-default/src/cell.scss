@@ -1,0 +1,52 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(cell) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+  min-height: 60px;
+
+  vertical-align: middle;
+  text-decoration: none;
+  overflow: hidden;
+
+  color: $--color-text-secondary;
+  background: $--color-white;
+
+  @include e(inner) {
+    position: relative;
+
+    width: 100%;
+
+    border-bottom: 1px solid #eff2f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: inherit;
+  }
+
+  @include e(content) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 4px;
+    flex: 1;
+  }
+
+  @include e(suffix) {
+    flex-shrink: 0;
+    text-align: center;
+    vertical-align: middle;
+
+    color: $--color-text-secondary;
+  }
+
+  &:last-child {
+    .ms-cell__inner {
+      border-bottom: none;
+    }
+  }
+}

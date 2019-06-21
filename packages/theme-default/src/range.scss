@@ -1,0 +1,82 @@
+@charset 'UTF-8';
+@import 'common/var';
+@import 'mixins/mixins';
+@import 'mixins/utils';
+
+@include b(range) {
+  position: relative;
+  display: flex;
+  height: 26px;
+  line-height: 26px;
+
+  & > * {
+    display: flex;
+    display: -webkit-box;
+  }
+  & *[slot='start'] {
+    margin-right: 5px;
+  }
+  & *[slot='end'] {
+    margin-left: 5px;
+  }
+
+  @include e(core) {
+    position: relative;
+    flex: 1;
+    margin-right: 26px;
+  }
+
+  @include e(runway) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: -26px;
+
+    border-top-color: #f3f3f6;
+    border-top-style: solid;
+    border-radius: 5px;
+  }
+
+  @include e(progress) {
+    position: absolute;
+    display: block;
+    background-color: #f3f3f6;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    border-radius: 5px 0 0 5px;
+  }
+
+  @include e(thumb) {
+    background-color: $--color-primary;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    cursor: move;
+
+    &::after {
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 10px;
+      height: 10px;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #00a17d;
+      border-radius: 100%;
+    }
+
+    @include when(disabled) {
+      background: #f1f2f4 !important;
+      &::after {
+        background: #dbdee4 !important;
+      }
+    }
+  }
+}
