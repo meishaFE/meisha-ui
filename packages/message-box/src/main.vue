@@ -42,7 +42,6 @@
                       :visible.sync="modalVisible"
                       :color="modalColor"
                       :close-on-click="closeOnClickModal"
-                      :lockScreen="lockScreen"
                       @close="handleModalClick" />
         </transition>
     </div>
@@ -101,11 +100,7 @@ export default {
       default: 'text'
     },
     inputValue: String,
-    inputPlaceholder: String,
-    lockScreen: {
-      type: Boolean,
-      default: true
-    }
+    inputPlaceholder: String
   },
 
   data() {

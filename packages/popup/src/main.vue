@@ -28,7 +28,6 @@
                       v-if="modal"
                       :visible="modalVisible"
                       :close-on-click="closeOnClickModal"
-                      :lockScreen="lockScreen"
                       @close="handleModalClick" />
         </transition>
     </div>
@@ -74,10 +73,6 @@ export default {
       default: '80%'
     },
     showHeader: {
-      type: Boolean,
-      default: true
-    },
-    lockScreen: {
       type: Boolean,
       default: true
     }
