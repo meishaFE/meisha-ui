@@ -121,7 +121,7 @@
 ### Demo
 
 ```js
-// 挂载在 vue 下
+// 挂载在 vue 上
 Vue.prototype.$toast('操作');
 this.$toast('操作');
 
