@@ -178,7 +178,8 @@ toast.close();
 | -------------- | --------------------------------- | ------- | ------ | ------ |
 | close-on-click | 是否可以点击关闭                  | Boolean | -      | true   |
 | lock-screen    | 是否锁定屏幕滚动                  | Boolean | -      | true   |
-| visible        | 是否显示 Modal，支持 .sync 修饰符 | Boolean | -      | false  |
+| visible        | 是否显示 Modal，支持 .sync 修饰符  | Boolean | -      | false  |
+| color          | 蒙层背景颜色值                    | String | -      | rgba(0,0,0, .2) |
 
 ### Events
 

@@ -85,7 +85,7 @@ export default {
     cancelButtonClass: String,
     modalColor: {
       type: String,
-      default: 'transparent'
+      default: 'rgba(0, 0, 0, .6)'
     },
     closeOnClickModal: {
       type: Boolean,
@@ -133,7 +133,11 @@ export default {
       this.$emit(type);
     }
   },
-
+  created () {
+    this.$nextTick(() => {
+      document.body.appendChild(this.$el);
+    });
+  },
   mounted() {
     if (this.visible) {
       this.open();
