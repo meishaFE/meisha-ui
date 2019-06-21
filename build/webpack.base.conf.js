@@ -34,12 +34,7 @@ module.exports = {
           },
           postLoaders: {
             html: 'babel-loader'
-          },
-          postcss: [
-            require('autoprefixer')({
-              browsers: ['iOS >= 7', 'Android >= 4.1']
-            })
-          ]
+          }
         }
       },
       {
