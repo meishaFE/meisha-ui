@@ -11,7 +11,7 @@
     "e2e:open": "vue-cli-service e2e:open"
   },
   "dependencies": {
-    "meisha-ui": "^0.0.31",
+    "meisha-ui": "^0.1.8",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1"
   },

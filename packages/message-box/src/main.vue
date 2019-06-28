@@ -133,15 +133,11 @@ export default {
       this.$emit(type);
     }
   },
-  created () {
-    this.$nextTick(() => {
-      document.body.appendChild(this.$el);
-    });
-  },
   mounted() {
     if (this.visible) {
       this.open();
     }
+    document.body.appendChild(this.$el);
   },
 
   watch: {
@@ -154,6 +150,10 @@ export default {
     }
   },
 
+  beforeDestroy() {
+    this.$el.remove();
+  },
+
   computed: {
     confirmButtonClasses() {
       return this.confirmButtonClass;
@@ -162,6 +162,7 @@ export default {
       return this.cancelButtonClass;
     }
   }
+
 };
 </script>
 <style>
